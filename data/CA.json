@@ -3,11 +3,40 @@
   "country": "Canada",
   "flag": "🇨🇦",
   "currency": "CAD",
-  "demographics": { ... },  // same as before, omitted for brevity
-  "religion": [ ... ],
-  "ethnic_groups": [ ... ],
-  "tax": { ... },
-  "land_units": [ ... ],
+  "demographics": {
+    "population": 38929000,
+    "male_percent": 49.6,
+    "female_percent": 50.4,
+    "growth_rate": 0.15,
+    "birth_rate": 9.8,
+    "death_rate": 8.3,
+    "infant_mortality": 4.5,
+    "life_expectancy_male": 79.8,
+    "life_expectancy_female": 84.0,
+    "median_age": 41.5,
+    "urban_percent": 81.5
+  },
+  "religion": [
+    { "name": "Christianity", "percent": 53.3, "pop": 20750000 }
+  ],
+  "ethnic_groups": [
+    { "name": "European", "percent": 67.4, "pop": 26230000 }
+  ],
+  "tax": {
+    "free_threshold": 15000,
+    "slabs": [
+      { "from": 0, "to": 15000, "rate": 0 },
+      { "from": 15001, "to": 53359, "rate": 15 },
+      { "from": 53360, "to": 106717, "rate": 20.5 },
+      { "from": 106718, "to": 165430, "rate": 26 },
+      { "from": 165431, "to": 235675, "rate": 29 },
+      { "from": 235676, "to": null, "rate": 33 }
+    ]
+  },
+  "land_units": [
+    { "name": "Acre", "to_sqft": 43560 },
+    { "name": "Square meter", "to_sqft": 10.7639 }
+  ],
   "products": [
     {
       "hs_code": "8517.13",
@@ -15,90 +44,6 @@
       "import_duty_percent": 0,
       "vat_percent": 5,
       "freight_usd_per_kg": 3.80
-    },
-    {
-      "hs_code": "8703.23",
-      "description": "Motor vehicles (passenger cars)",
-      "import_duty_percent": 6.1,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 2.50
-    },
-    {
-      "hs_code": "3004.90",
-      "description": "Pharmaceuticals (medicaments)",
-      "import_duty_percent": 0,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 8.00
-    },
-    {
-      "hs_code": "8471.30",
-      "description": "Laptops & computers",
-      "import_duty_percent": 0,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 4.00
-    },
-    {
-      "hs_code": "6109.10",
-      "description": "T-shirts, cotton",
-      "import_duty_percent": 18,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 3.00
-    },
-    {
-      "hs_code": "9403.60",
-      "description": "Wooden furniture",
-      "import_duty_percent": 9.5,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 2.00
-    },
-    {
-      "hs_code": "0803.10",
-      "description": "Bananas, fresh",
-      "import_duty_percent": 0,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 0.80
-    },
-    {
-      "hs_code": "7207.11",
-      "description": "Iron and steel (semi-finished)",
-      "import_duty_percent": 0,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 0.50
-    },
-    {
-      "hs_code": "8429.52",
-      "description": "Excavating machinery",
-      "import_duty_percent": 0,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 1.20
-    },
-    {
-      "hs_code": "3304.10",
-      "description": "Cosmetics (lip make-up)",
-      "import_duty_percent": 6.5,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 5.00
-    },
-    {
-      "hs_code": "4412.10",
-      "description": "Plywood",
-      "import_duty_percent": 0,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 1.50
-    },
-    {
-      "hs_code": "1001.99",
-      "description": "Wheat (other)",
-      "import_duty_percent": 0,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 0.30
-    },
-    {
-      "hs_code": "9506.91",
-      "description": "Sports equipment (general)",
-      "import_duty_percent": 8,
-      "vat_percent": 5,
-      "freight_usd_per_kg": 2.20
     }
   ]
 }
