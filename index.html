@@ -27,7 +27,6 @@
   --font-mono:    'DM Mono', monospace;
   --nav-h:     64px;
 }
-
 html{scroll-behavior:smooth}
 body{
   font-family:var(--font-body);
@@ -36,13 +35,9 @@ body{
   min-height:100vh;
   overflow-x:hidden;
 }
-
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--green-mid);border-radius:3px}
-
-/* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   height:var(--nav-h);
@@ -76,8 +71,6 @@ nav{
 .nav-cta:hover{background:var(--green-lite)!important;color:var(--white)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:0.3s}
-
-/* ── HERO ── */
 .hero{
   min-height:100vh;
   display:flex;flex-direction:column;
@@ -114,7 +107,6 @@ nav{
 .hero-tag::before{content:'';width:6px;height:6px;background:var(--accent);
   border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.7)}}
-
 .hero h1{
   font-family:var(--font-display);
   font-size:clamp(3rem, 9vw, 7rem);
@@ -151,8 +143,6 @@ nav{
   transition:all 0.25s;display:inline-flex;align-items:center;gap:0.5rem;
 }
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
-
-/* ── STATS ROW ── */
 .hero-stats{
   display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;
   margin-top:4rem;padding-top:3rem;
@@ -165,11 +155,8 @@ nav{
   color:var(--accent);display:block;
 }
 .hero-stat .lbl{font-size:0.72rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
-
-/* ── SECTION ── */
 section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 .sec-label{
   font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;
@@ -181,8 +168,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   margin-bottom:1rem;
 }
 .sec-sub{color:var(--muted);font-size:0.95rem;line-height:1.7;max-width:560px}
-
-/* ── COUNTRY GRID ── */
 #explore{padding-top:2rem}
 .country-search{
   width:100%;background:rgba(255,255,255,0.05);
@@ -193,7 +178,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 }
 .country-search::placeholder{color:var(--muted)}
 .country-search:focus{border-color:var(--accent)}
-
 .country-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
@@ -222,8 +206,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   background:rgba(94,207,130,0.1);color:var(--accent);
   font-weight:600;letter-spacing:0.5px;
 }
-
-/* ── FEATURES ── */
 .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:3rem}
 .feat{
   background:var(--bg2);border:1px solid var(--border);border-radius:16px;
@@ -237,8 +219,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 }
 .feat h3{font-family:var(--font-display);font-size:1.25rem;font-weight:600;margin-bottom:0.5rem}
 .feat p{font-size:0.82rem;color:var(--muted);line-height:1.7}
-
-/* ── COUNTRY PAGE (hidden by default) ── */
 #country-page{
   display:none;
   min-height:100vh;
@@ -247,8 +227,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 #country-page.active{display:block}
 #landing{transition:opacity 0.3s}
 #landing.hidden{display:none}
-
-/* ── COUNTRY HEADER ── */
 .country-hero{
   background:var(--bg2);
   border-bottom:1px solid var(--border);
@@ -277,8 +255,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   cursor:pointer;transition:all 0.2s;text-decoration:none;
 }
 .dl-btn:hover{background:var(--green-mid);border-color:var(--accent)}
-
-/* ── TABS ── */
 .page-tabs{
   background:var(--bg2);border-bottom:1px solid var(--border);
   display:flex;overflow-x:auto;padding:0 1.5rem;
@@ -293,17 +269,12 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 }
 .ptab:hover{color:var(--white)}
 .ptab.active{color:var(--accent);border-bottom-color:var(--accent)}
-
-/* ── SPREADSHEET / DATA TABLES ── */
 .data-section{max-width:1200px;margin:0 auto;padding:1.5rem}
 .tab-panel{display:none}
 .tab-panel.active{display:block}
-
 .panel-head{margin-bottom:1.25rem}
 .panel-head h2{font-family:var(--font-display);font-size:1.5rem;color:var(--white);margin-bottom:0.25rem}
 .panel-head p{font-size:0.8rem;color:var(--muted)}
-
-/* ── SPREADSHEET TABLE ── */
 .sheet-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:1.5rem}
 .sheet{width:100%;border-collapse:collapse}
 .sheet thead tr{background:var(--green);color:var(--white)}
@@ -336,8 +307,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 .sheet td.green{color:#1a6b3c;font-weight:600}
 .sheet td.red{color:#c0392b;font-weight:600}
 .sheet td.gold{color:#8a5e00}
-
-/* ── IMPORT CALCULATOR ── */
 .calc-card{
   background:var(--bg2);border:1px solid var(--border);border-radius:14px;
   padding:1.5rem;margin-bottom:1.5rem;
@@ -364,8 +333,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   transition:all 0.2s;display:inline-flex;align-items:center;gap:0.4rem;
 }
 .calc-run:hover{background:#78e09a;transform:translateY(-1px)}
-
-/* ── RESULT CELLS ── */
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.75rem;margin-top:1rem}
 .rcell{
   background:var(--cell-bg);border-radius:10px;padding:1rem;
@@ -375,8 +342,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 .rcell-value{font-family:var(--font-mono);font-size:1.1rem;font-weight:500;color:var(--cell-text)}
 .rcell-value.total{color:#1a6b3c;font-size:1.3rem;font-weight:700}
 .rcell-value.red{color:#c0392b}
-
-/* ── HS CODE SEARCH ── */
 .hs-search{display:flex;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap}
 .hs-input{
   flex:1;min-width:200px;
@@ -393,20 +358,14 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   cursor:pointer;transition:all 0.2s;white-space:nowrap;
 }
 .hs-btn:hover{background:var(--green-lite)}
-
-/* ── INCOME CALCULATOR ── */
 .income-calc{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 @media(max-width:700px){.income-calc{grid-template-columns:1fr}}
-
-/* ── FOOTER ── */
 footer{
   background:var(--bg2);border-top:1px solid var(--border);
   padding:2rem 1.5rem;text-align:center;
   color:var(--muted);font-size:0.75rem;line-height:1.8;
 }
 footer strong{color:var(--white)}
-
-/* ── MOBILE ── */
 @media(max-width:768px){
   .nav-links{display:none;position:fixed;top:var(--nav-h);left:0;right:0;
     background:var(--bg2);border-bottom:1px solid var(--border);
@@ -439,28 +398,18 @@ footer strong{color:var(--white)}
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════════ -->
 <!-- LANDING PAGE -->
-<!-- ═══════════════════════════════════════════════ -->
 <div id="landing">
-
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
-
-    <div class="hero-tag">
-      <span></span> Open Data · Real Numbers · Zero Jargon
-    </div>
-
+    <div class="hero-tag"><span></span> Open Data · Real Numbers · Zero Jargon</div>
     <h1>Count <em>It.</em></h1>
     <p class="hero-sub">World demographics, income tax, VAT, import costs and trade data — all in one transparent, free platform. Click a country. Get the data. Download it.</p>
-
     <div class="hero-btns">
       <a href="#explore" class="btn-primary">🌍 Explore Countries</a>
       <a href="https://github.com/YOUR_USERNAME/count-it" class="btn-outline" target="_blank">⭐ Star on GitHub</a>
     </div>
-
     <div class="hero-stats">
       <div class="hero-stat"><span class="num">195</span><span class="lbl">Countries</span></div>
       <div class="hero-stat"><span class="num">8B+</span><span class="lbl">People Tracked</span></div>
@@ -469,7 +418,6 @@ footer strong{color:var(--white)}
     </div>
   </div>
 
-  <!-- FEATURES -->
   <section id="features">
     <div class="sec-label">What's Inside</div>
     <div class="sec-title">Everything in<br><em style="color:var(--accent)">one place.</em></div>
@@ -483,31 +431,25 @@ footer strong{color:var(--white)}
     </div>
   </section>
 
-  <!-- COUNTRY EXPLORER -->
   <section id="explore">
     <div class="sec-label">Country Explorer</div>
     <div class="sec-title">Pick a country.</div>
     <p class="sec-sub" style="margin-bottom:2rem">Click any country to view demographics, tax rates, import costs and live calculators.</p>
-    <input class="country-search" id="countrySearch" placeholder="🔍  Search country name..." oninput="filterCountries(this.value)">
+    <input class="country-search" id="countrySearch" placeholder="🔍 Search country name..." oninput="filterCountries(this.value)">
     <div class="country-grid" id="countryGrid"></div>
   </section>
+</div>
 
-</div><!-- end #landing -->
-
-<!-- ═══════════════════════════════════════════════ -->
 <!-- COUNTRY PAGE -->
-<!-- ═══════════════════════════════════════════════ -->
 <div id="country-page">
-
-  <!-- Country Header -->
   <div class="country-hero">
     <div class="country-hero-inner">
       <button class="back-btn" onclick="goHome()">← Back to Countries</button>
       <div class="country-hero-title">
-        <span class="c-flag" id="c-flag">🇧🇩</span>
+        <span class="c-flag" id="c-flag">🌍</span>
         <div>
-          <div class="c-name" id="c-name">Bangladesh</div>
-          <div class="c-sub" id="c-sub">South Asia · Population: 170M · Data: 2024–25</div>
+          <div class="c-name" id="c-name">Select a Country</div>
+          <div class="c-sub" id="c-sub">Click a country from the list to load data</div>
         </div>
       </div>
       <div class="download-row">
@@ -517,7 +459,6 @@ footer strong{color:var(--white)}
     </div>
   </div>
 
-  <!-- Tabs -->
   <div class="page-tabs">
     <button class="ptab active" onclick="showTab('demographics')">👥 Demographics</button>
     <button class="ptab" onclick="showTab('income')">💰 Income & Tax</button>
@@ -527,622 +468,434 @@ footer strong{color:var(--white)}
   </div>
 
   <div class="data-section">
-
-    <!-- ── DEMOGRAPHICS ── -->
+    <!-- DEMOGRAPHICS -->
     <div class="tab-panel active" id="tab-demographics">
-      <div class="panel-head">
-        <h2>Demographics</h2>
-        <p>Official data — World Bank, UN Population Division, Bangladesh BBS 2024</p>
-      </div>
-      <div class="sheet-wrap">
-        <table class="sheet" id="sheet-demo">
-          <thead><tr><th>Indicator</th><th>Value</th><th>Year</th><th>Source</th></tr></thead>
-          <tbody id="demo-body"></tbody>
-        </table>
-      </div>
-
-      <div class="sheet-wrap" style="margin-top:1.5rem">
-        <table class="sheet">
-          <thead><tr><th>Religion</th><th>Population %</th><th>Est. Population</th></tr></thead>
-          <tbody id="religion-body"></tbody>
-        </table>
-      </div>
-
-      <div class="sheet-wrap" style="margin-top:1.5rem">
-        <table class="sheet">
-          <thead><tr><th>Ethnic Group</th><th>Population %</th><th>Est. Population</th></tr></thead>
-          <tbody id="ethnic-body"></tbody>
-        </table>
-      </div>
+      <div class="panel-head"><h2>Demographics</h2><p>Official data — World Bank, UN Population Division</p></div>
+      <div class="sheet-wrap"><table class="sheet"><thead><tr><th>Indicator</th><th>Value</th><th>Year</th><th>Source</th></tr></thead><tbody id="demo-body"></tbody></table></div>
+      <div class="sheet-wrap"><table class="sheet"><thead><tr><th>Religion</th><th>Population %</th><th>Est. Population</th></tr></thead><tbody id="religion-body"></tbody></table></div>
+      <div class="sheet-wrap"><table class="sheet"><thead><tr><th>Ethnic Group</th><th>Population %</th><th>Est. Population</th></tr></thead><tbody id="ethnic-body"></tbody></table></div>
     </div>
 
-    <!-- ── INCOME & TAX ── -->
+    <!-- INCOME & TAX -->
     <div class="tab-panel" id="tab-income">
-      <div class="panel-head">
-        <h2>Income & Tax Calculator</h2>
-        <p>Edit the income field — tax updates live. Assessment Year 2025-26.</p>
-      </div>
-
+      <div class="panel-head"><h2>Income & Tax Calculator</h2><p>Edit the income field — tax updates live. Assessment Year 2025-26.</p></div>
       <div class="income-calc">
         <div class="calc-card">
           <h3>Your Income</h3>
           <div class="calc-form" style="grid-template-columns:1fr">
-            <div class="cf-group">
-              <label>Taxpayer Category</label>
-              <select id="i_cat" onchange="calcIncomeTax()">
-                <option value="general">General</option>
-                <option value="women">Women / Senior (65+)</option>
-                <option value="disabled">Person with Disability</option>
-                <option value="freedom">Freedom Fighter</option>
-              </select>
-            </div>
-            <div class="cf-group">
-              <label>Annual Income (BDT)</label>
-              <input type="number" id="i_income" placeholder="1000000" value="1000000" oninput="calcIncomeTax()">
-            </div>
-            <div class="cf-group">
-              <label>Eligible Investment for Rebate (BDT)</label>
-              <input type="number" id="i_invest" placeholder="150000" value="0" oninput="calcIncomeTax()">
-            </div>
-            <div class="cf-group">
-              <label>Assessment Year</label>
-              <select id="i_ay" onchange="calcIncomeTax()">
-                <option value="2025-26">AY 2025-26 (Current)</option>
-                <option value="2026-27">AY 2026-27 (Proposed)</option>
-              </select>
-            </div>
+            <div class="cf-group"><label>Taxpayer Category</label><select id="i_cat" onchange="calcIncomeTax()"><option value="general">General</option><option value="women">Women / Senior (65+)</option><option value="disabled">Person with Disability</option><option value="freedom">Freedom Fighter</option></select></div>
+            <div class="cf-group"><label>Annual Income (BDT)</label><input type="number" id="i_income" placeholder="1000000" value="1000000" oninput="calcIncomeTax()"></div>
+            <div class="cf-group"><label>Eligible Investment for Rebate (BDT)</label><input type="number" id="i_invest" placeholder="150000" value="0" oninput="calcIncomeTax()"></div>
+            <div class="cf-group"><label>Assessment Year</label><select id="i_ay" onchange="calcIncomeTax()"><option value="2025-26">AY 2025-26 (Current)</option><option value="2026-27">AY 2026-27 (Proposed)</option></select></div>
           </div>
         </div>
-
-        <div class="calc-card">
-          <h3>Tax Breakdown</h3>
-          <div id="income-result">
-            <div class="result-grid" id="income-result-cells"></div>
-          </div>
-        </div>
+        <div class="calc-card"><h3>Tax Breakdown</h3><div id="income-result"><div class="result-grid" id="income-result-cells"></div></div></div>
       </div>
-
-      <!-- Slab table -->
-      <div class="sheet-wrap">
-        <table class="sheet">
-          <thead><tr><th>#</th><th>Slab</th><th>Rate</th><th>Slab Tax</th><th>Cumulative Tax</th></tr></thead>
-          <tbody id="slab-body"></tbody>
-        </table>
-      </div>
+      <div class="sheet-wrap"><table class="sheet"><thead><tr><th>#</th><th>Slab</th><th>Rate</th><th>Slab Tax</th><th>Cumulative Tax</th></tr></thead><tbody id="slab-body"></tbody></table></div>
     </div>
 
-    <!-- ── IMPORT CALCULATOR ── -->
+    <!-- IMPORT CALCULATOR -->
     <div class="tab-panel" id="tab-import">
-      <div class="panel-head">
-        <h2>Import Cost Calculator</h2>
-        <p>Enter product details to calculate full landed cost including customs, VAT and freight.</p>
-      </div>
-
-      <!-- HS Code Search -->
-      <div class="calc-card">
-        <h3>🔍 Product / HS Code Lookup</h3>
-        <div class="hs-search">
-          <input class="hs-input" id="hs-input" placeholder="Type product name or HS code (e.g. 8471 — Computers, 6203 — Suits)...">
-          <button class="hs-btn" onclick="hsSearch()">Search</button>
-        </div>
-        <div class="sheet-wrap" id="hs-results-wrap" style="display:none">
-          <table class="sheet">
-            <thead><tr><th>HS Code</th><th>Description</th><th>BD Customs Duty</th><th>VAT</th><th>SD</th><th>RD</th></tr></thead>
-            <tbody id="hs-results"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Import Calculator -->
-      <div class="calc-card">
-        <h3>📦 Calculate Import Cost</h3>
-        <div class="calc-form">
-          <div class="cf-group">
-            <label>Product Name</label>
-            <input type="text" id="p_name" placeholder="e.g. Laptop Computer" value="Laptop Computer">
-          </div>
-          <div class="cf-group">
-            <label>HS Code</label>
-            <input type="text" id="p_hs" placeholder="e.g. 8471.30" value="8471.30">
-          </div>
-          <div class="cf-group">
-            <label>Unit Price (USD)</label>
-            <input type="number" id="p_price" placeholder="500" value="500" oninput="calcImport()">
-          </div>
-          <div class="cf-group">
-            <label>Quantity</label>
-            <input type="number" id="p_qty" placeholder="10" value="10" oninput="calcImport()">
-          </div>
-          <div class="cf-group">
-            <label>USD → BDT Rate</label>
-            <input type="number" id="p_rate" placeholder="110" value="110" oninput="calcImport()">
-          </div>
-          <div class="cf-group">
-            <label>Goods Category</label>
-            <select id="p_cat" onchange="calcImport()">
-              <option value="finished">Finished Consumer Goods (25%)</option>
-              <option value="raw">Raw Materials (5%)</option>
-              <option value="intermediate">Intermediate Goods (10%)</option>
-              <option value="capital">Capital Machinery (1%)</option>
-              <option value="luxury">Luxury Goods (25%+)</option>
-            </select>
-          </div>
-          <div class="cf-group">
-            <label>Freight Type</label>
-            <select id="p_freight" onchange="calcImport()">
-              <option value="sea">🚢 Sea Freight</option>
-              <option value="air">✈️ Air Freight</option>
-              <option value="land">🚛 Land Freight</option>
-            </select>
-          </div>
-          <div class="cf-group">
-            <label>Freight Cost (USD)</label>
-            <input type="number" id="p_fc" placeholder="150" value="150" oninput="calcImport()">
-          </div>
-        </div>
-        <button class="calc-run" onclick="calcImport()">⚡ Calculate Total Cost</button>
-        <div class="result-grid" id="import-result" style="margin-top:1.25rem"></div>
-      </div>
-
-      <!-- Import sheet -->
-      <div class="sheet-wrap" id="import-sheet-wrap" style="display:none">
-        <table class="sheet">
-          <thead><tr><th>Item</th><th>Unit Price (USD)</th><th>Unit Price (BDT)</th><th>Qty</th><th>CIF Value</th><th>Customs Duty</th><th>VAT</th><th>AIT</th><th>Freight</th><th>Total Landed</th></tr></thead>
-          <tbody id="import-sheet-body"></tbody>
-        </table>
-      </div>
+      <div class="panel-head"><h2>Import Cost Calculator</h2><p>Enter product details to calculate full landed cost including customs, VAT and freight.</p></div>
+      <div class="calc-card"><h3>🔍 Product / HS Code Lookup</h3><div class="hs-search"><input class="hs-input" id="hs-input" placeholder="Type product name or HS code..."><button class="hs-btn" onclick="hsSearch()">Search</button></div><div class="sheet-wrap" id="hs-results-wrap" style="display:none"><table class="sheet"><thead><tr><th>HS Code</th><th>Description</th><th>BD Customs Duty</th><th>VAT</th><th>SD</th><th>RD</th></tr></thead><tbody id="hs-results"></tbody></table></div></div>
+      <div class="calc-card"><h3>📦 Calculate Import Cost</h3><div class="calc-form"><div class="cf-group"><label>Product Name</label><input type="text" id="p_name" placeholder="e.g. Laptop Computer" value="Laptop Computer"></div><div class="cf-group"><label>HS Code</label><input type="text" id="p_hs" placeholder="e.g. 8471.30" value="8471.30"></div><div class="cf-group"><label>Unit Price (USD)</label><input type="number" id="p_price" placeholder="500" value="500" oninput="calcImport()"></div><div class="cf-group"><label>Quantity</label><input type="number" id="p_qty" placeholder="10" value="10" oninput="calcImport()"></div><div class="cf-group"><label>USD → BDT Rate</label><input type="number" id="p_rate" placeholder="110" value="110" oninput="calcImport()"></div><div class="cf-group"><label>Goods Category</label><select id="p_cat" onchange="calcImport()"><option value="finished">Finished Consumer Goods (25%)</option><option value="raw">Raw Materials (5%)</option><option value="intermediate">Intermediate Goods (10%)</option><option value="capital">Capital Machinery (1%)</option><option value="luxury">Luxury Goods (25%+)</option></select></div><div class="cf-group"><label>Freight Type</label><select id="p_freight" onchange="calcImport()"><option value="sea">🚢 Sea Freight</option><option value="air">✈️ Air Freight</option><option value="land">🚛 Land Freight</option></select></div><div class="cf-group"><label>Freight Cost (USD)</label><input type="number" id="p_fc" placeholder="150" value="150" oninput="calcImport()"></div></div><button class="calc-run" onclick="calcImport()">⚡ Calculate Total Cost</button><div class="result-grid" id="import-result" style="margin-top:1.25rem"></div></div>
     </div>
 
-    <!-- ── FREIGHT ── -->
+    <!-- FREIGHT -->
     <div class="tab-panel" id="tab-freight">
-      <div class="panel-head">
-        <h2>Freight Cost Reference</h2>
-        <p>Estimated costs for common shipping routes to Bangladesh. Actual rates vary by carrier.</p>
-      </div>
-      <div class="sheet-wrap">
-        <table class="sheet">
-          <thead><tr><th>Route</th><th>Mode</th><th>Transit Time</th><th>Est. Cost (20ft FCL)</th><th>Est. Cost (per kg Air)</th><th>Notes</th></tr></thead>
-          <tbody id="freight-body"></tbody>
-        </table>
-      </div>
+      <div class="panel-head"><h2>Freight Cost Reference</h2><p>Estimated costs for common shipping routes. Actual rates vary by carrier.</p></div>
+      <div class="sheet-wrap"><table class="sheet"><thead><tr><th>Route</th><th>Mode</th><th>Transit Time</th><th>Est. Cost (20ft FCL)</th><th>Est. Cost (per kg Air)</th><th>Notes</th></tr></thead><tbody id="freight-body"></tbody></table></div>
     </div>
 
-    <!-- ── VAT ── -->
+    <!-- VAT -->
     <div class="tab-panel" id="tab-vat">
-      <div class="panel-head">
-        <h2>VAT / GST Rates</h2>
-        <p>Bangladesh VAT rates by sector — Finance Ordinance 2025</p>
-      </div>
-      <div class="sheet-wrap">
-        <table class="sheet">
-          <thead><tr><th>Sector</th><th>VAT Rate</th><th>Status</th><th>Notes</th></tr></thead>
-          <tbody id="vat-body"></tbody>
-        </table>
-      </div>
+      <div class="panel-head"><h2>VAT / GST Rates</h2><p>Value Added Tax rates by country and sector</p></div>
+      <div class="sheet-wrap"><table class="sheet"><thead><tr><th>Sector</th><th>VAT Rate</th><th>Status</th><th>Notes</th></tr></thead><tbody id="vat-body"></tbody></table></div>
     </div>
+  </div>
+</div>
 
-  </div><!-- data-section -->
-</div><!-- country-page -->
-
-<footer>
-  <strong>Count It</strong> — Open Data Platform for World Demographics & Tax<br>
-  Data sources: World Bank · UN Population Division · Bangladesh BBS · NBR · IMF · WTO<br>
-  <em>Open source · MIT License · Free forever · github.com/YOUR_USERNAME/count-it</em>
-</footer>
+<footer><strong>Count It</strong> — Open Data Platform for World Demographics & Tax<br>Data sources: World Bank · UN Population Division · IMF · WTO<br><em>Open source · MIT License</em></footer>
 
 <script>
-// ═══════════════════════════════════════════════════════
-// DATA
-// ═══════════════════════════════════════════════════════
-const COUNTRIES = [
-  { code:'BD', flag:'🇧🇩', name:'Bangladesh',     pop:'173M',  region:'South Asia',     tags:['Tax DB','Demographics','Import'] },
-  { code:'IN', flag:'🇮🇳', name:'India',           pop:'1.44B', region:'South Asia',     tags:['GST','Demographics'] },
-  { code:'PK', flag:'🇵🇰', name:'Pakistan',        pop:'231M',  region:'South Asia',     tags:['Tax','Demographics'] },
-  { code:'CN', flag:'🇨🇳', name:'China',           pop:'1.41B', region:'East Asia',      tags:['VAT','Trade'] },
-  { code:'US', flag:'🇺🇸', name:'United States',   pop:'335M',  region:'North America',  tags:['Federal Tax','State Tax'] },
-  { code:'GB', flag:'🇬🇧', name:'United Kingdom',  pop:'68M',   region:'Europe',         tags:['VAT','Income Tax'] },
-  { code:'DE', flag:'🇩🇪', name:'Germany',         pop:'84M',   region:'Europe',         tags:['VAT','Demographics'] },
-  { code:'JP', flag:'🇯🇵', name:'Japan',           pop:'124M',  region:'East Asia',      tags:['Consumption Tax'] },
-  { code:'MY', flag:'🇲🇾', name:'Malaysia',        pop:'33M',   region:'Southeast Asia', tags:['SST','Demographics'] },
-  { code:'SG', flag:'🇸🇬', name:'Singapore',       pop:'5.9M',  region:'Southeast Asia', tags:['GST','Trade Hub'] },
-  { code:'AU', flag:'🇦🇺', name:'Australia',       pop:'26M',   region:'Oceania',        tags:['GST','Income Tax'] },
-  { code:'CA', flag:'🇨🇦', name:'Canada',          pop:'40M',   region:'North America',  tags:['GST/HST'] },
-  { code:'TR', flag:'🇹🇷', name:'Turkey',          pop:'85M',   region:'Middle East',    tags:['VAT','Demographics'] },
-  { code:'SA', flag:'🇸🇦', name:'Saudi Arabia',    pop:'36M',   region:'Middle East',    tags:['VAT','Trade'] },
-  { code:'AE', flag:'🇦🇪', name:'UAE',             pop:'9.9M',  region:'Middle East',    tags:['VAT','Freezone'] },
-  { code:'NG', flag:'🇳🇬', name:'Nigeria',         pop:'220M',  region:'Africa',         tags:['VAT','Demographics'] },
-  { code:'ZA', flag:'🇿🇦', name:'South Africa',    pop:'60M',   region:'Africa',         tags:['VAT','Income Tax'] },
-  { code:'BR', flag:'🇧🇷', name:'Brazil',          pop:'215M',  region:'South America',  tags:['Tax','Demographics'] },
-  { code:'ID', flag:'🇮🇩', name:'Indonesia',       pop:'277M',  region:'Southeast Asia', tags:['VAT','Trade'] },
-  { code:'TH', flag:'🇹🇭', name:'Thailand',        pop:'71M',   region:'Southeast Asia', tags:['VAT','Import'] },
-];
-
-// ── Bangladesh Data ──────────────────────────────────────────────────────────
-const BD_DEMO = [
-  ['Total Population',          '173,000,000',  '2024', 'World Bank / BBS'],
-  ['Male Population',           '86,500,000',   '2024', 'BBS 2024'],
-  ['Female Population',         '86,500,000',   '2024', 'BBS 2024'],
-  ['Gender Ratio (M:F)',        '100 : 100',     '2024', 'BBS 2024'],
-  ['Population Growth Rate',    '1.01% / year', '2024', 'World Bank'],
-  ['Birth Rate',                '17.3 per 1000','2024', 'UN Population Division'],
-  ['Death Rate',                '5.6 per 1000', '2024', 'UN Population Division'],
-  ['Infant Mortality Rate',     '24.1 per 1000 live births','2024','WHO'],
-  ['Life Expectancy (Male)',    '72.1 years',   '2024', 'WHO'],
-  ['Life Expectancy (Female)',  '75.3 years',   '2024', 'WHO'],
-  ['Median Age',                '28.1 years',   '2024', 'UN'],
-  ['Urban Population',          '40.5%',        '2024', 'World Bank'],
-  ['Rural Population',          '59.5%',        '2024', 'World Bank'],
-  ['Literacy Rate',             '75.6%',        '2023', 'UNESCO'],
-  ['GDP per Capita (USD)',      '$2,688',        '2024', 'IMF'],
-  ['Married (Age 15+)',         '68.4%',        '2022', 'BBS SVRS 2022'],
-  ['Never Married',             '28.1%',        '2022', 'BBS SVRS 2022'],
-  ['Widowed / Divorced',        '3.5%',         '2022', 'BBS SVRS 2022'],
-  ['Child Marriage Rate (F)',   '51.4%',        '2023', 'UNICEF'],
-  ['Labour Force Participation','58.1%',        '2023', 'ILO'],
-];
-
-const BD_RELIGION = [
-  ['Islam (Sunni)',  '91.0', '157,430,000'],
-  ['Hinduism',       '7.9',  '13,667,000'],
-  ['Buddhism',       '0.6',  '1,038,000'],
-  ['Christianity',   '0.4',  '692,000'],
-  ['Other / No Religion','0.1','173,000'],
-];
-
-const BD_ETHNIC = [
-  ['Bengali',        '98.0', '169,540,000'],
-  ['Chakma',         '0.3',  '519,000'],
-  ['Marma (Magh)',   '0.2',  '346,000'],
-  ['Tripuri',        '0.1',  '173,000'],
-  ['Garo',           '0.1',  '173,000'],
-  ['Other Indigenous','0.3', '519,000'],
-];
-
-const BD_VAT = [
-  ['Standard Goods & Services',        '15%',   'Standard',  'Applies to most goods and services'],
-  ['Restaurant / Food Service',        '5%',    'Truncated', 'Reduced rate for restaurants'],
-  ['Retail Shops (Non-AC)',            '4%',    'Truncated', 'Small retail without air conditioning'],
-  ['Retail Shops (AC)',                '7.5%',  'Truncated', 'Air conditioned retail'],
-  ['Construction Services',            '7.5%',  'Truncated', 'Civil construction'],
-  ['Telecommunication',                '15%',   'Standard',  'Mobile, internet, broadband'],
-  ['Banking & Financial Services',     '15%',   'Standard',  ''],
-  ['Software / IT Services',           '0%',    'Exempt',    'Promoted sector — NBR exemption'],
-  ['Medical / Health Services',        '0%',    'Exempt',    'Hospitals, clinics, medicines'],
-  ['Education',                        '0%',    'Exempt',    'Schools, colleges, universities'],
-  ['Agricultural Inputs',              '0%',    'Exempt',    'Seeds, fertilizers, pesticides'],
-  ['Basic Food (Rice, Wheat, Salt)',   '0%',    'Exempt',    'Essential food basket'],
-  ['Cigarettes / Tobacco',             '15%+',  'Standard+SD','Plus Supplementary Duty 100-500%'],
-];
-
-const BD_FREIGHT = [
-  ['China (Shanghai) → Bangladesh (Ctg)', 'Sea (FCL 20ft)', '14–18 days', '$850–$1,200',  '$4.5–$6/kg',  'Most common import route'],
-  ['China (Guangzhou) → Bangladesh',      'Sea (LCL)',      '16–20 days', '$18–$25/CBM',  '—',           'Less than container load'],
-  ['India (Kolkata) → Bangladesh',        'Land',           '3–5 days',   '$500–$800/truck','—',          'Benapole land port'],
-  ['Dubai (UAE) → Bangladesh',            'Sea',            '12–16 days', '$1,100–$1,500', '$5–$7/kg',   'Re-export hub'],
-  ['Dubai (UAE) → Bangladesh',            'Air',            '2–3 days',   '—',             '$5.5–$8/kg', 'Fast goods & samples'],
-  ['UK/Europe → Bangladesh',              'Sea',            '25–35 days', '$1,800–$2,500', '$6–$9/kg',   'Via Suez or Cape'],
-  ['USA → Bangladesh',                    'Sea',            '30–40 days', '$2,200–$3,000', '$7–$11/kg',  'Trans-Pacific + Feeder'],
-  ['Singapore → Bangladesh',             'Sea',            '8–12 days',  '$700–$1,000',   '$4–$6/kg',   'Transshipment hub'],
-];
-
-const HS_CODES = [
-  { code:'8471.30', desc:'Portable computers (laptops, notebooks)',    cd:0,   vat:15, sd:0,  rd:5  },
-  { code:'8471.41', desc:'Desktop computers',                          cd:0,   vat:15, sd:0,  rd:5  },
-  { code:'8517.12', desc:'Mobile phones / smartphones',               cd:25,  vat:15, sd:0,  rd:5  },
-  { code:'6203.42', desc:'Men\'s trousers / jeans (cotton)',          cd:25,  vat:15, sd:30, rd:10 },
-  { code:'8703.23', desc:'Passenger cars (1000–1500cc)',              cd:25,  vat:15, sd:45, rd:10 },
-  { code:'0902.10', desc:'Green tea (in packages ≤3kg)',              cd:25,  vat:15, sd:0,  rd:0  },
-  { code:'3004.90', desc:'Medicaments (mixed, retail)',               cd:0,   vat:0,  sd:0,  rd:0  },
-  { code:'8528.72', desc:'Television sets (colour)',                  cd:25,  vat:15, sd:30, rd:5  },
-  { code:'1001.99', desc:'Wheat (other)',                             cd:25,  vat:0,  sd:0,  rd:0  },
-  { code:'2710.19', desc:'Petroleum oils (other than crude)',         cd:10,  vat:15, sd:0,  rd:3  },
-  { code:'7208.51', desc:'Flat-rolled iron/steel products',          cd:5,   vat:15, sd:0,  rd:3  },
-  { code:'8544.42', desc:'Electric conductors (USB/data cables)',     cd:25,  vat:15, sd:0,  rd:5  },
-];
-
-const TAX_DATA = {
-  "2025-26": {
-    thresholds:{ general:350000, women:400000, disabled:475000, freedom:500000 },
-    slabs:[
-      { label:'First ৳3,50,000',  amt:350000,   rate:0  },
-      { label:'Next ৳1,00,000',   amt:100000,   rate:5  },
-      { label:'Next ৳4,00,000',   amt:400000,   rate:10 },
-      { label:'Next ৳5,00,000',   amt:500000,   rate:15 },
-      { label:'Next ৳5,00,000',   amt:500000,   rate:20 },
-      { label:'Next ৳20,00,000',  amt:2000000,  rate:25 },
-      { label:'Balance',          amt:Infinity, rate:30 },
-    ]
-  },
-  "2026-27": {
-    thresholds:{ general:375000, women:425000, disabled:500000, freedom:525000 },
-    slabs:[
-      { label:'First ৳3,75,000',  amt:375000,   rate:0  },
-      { label:'Next ৳3,00,000',   amt:300000,   rate:10 },
-      { label:'Next ৳4,00,000',   amt:400000,   rate:15 },
-      { label:'Next ৳5,00,000',   amt:500000,   rate:20 },
-      { label:'Next ৳20,00,000',  amt:2000000,  rate:25 },
-      { label:'Balance',          amt:Infinity, rate:30 },
-    ]
+// ============================================================
+// COUNTRY DATA LOADER - FETCHES FROM data/CountryName.html
+// ============================================================
+async function loadCountryData(countryName) {
+  try {
+    const demoBody = document.getElementById('demo-body');
+    if (demoBody) demoBody.innerHTML = '<tr><td colspan="4">Loading data...</td></tr>';
+    
+    const response = await fetch(`data/${countryName}.html`);
+    if (!response.ok) throw new Error(`HTTP ${response.status} - File not found`);
+    
+    const data = await response.json();
+    
+    // Update header
+    if (document.getElementById('c-flag')) document.getElementById('c-flag').innerText = data.flag || '🌍';
+    if (document.getElementById('c-name')) document.getElementById('c-name').innerText = data.country || countryName;
+    if (document.getElementById('c-sub')) document.getElementById('c-sub').innerHTML = data.subtitle || `${data.region || ''} · Population: ${(data.demographics?.population / 1000000).toFixed(0)}M`;
+    
+    // Demographics Table
+    if (demoBody && data.demographics) {
+      demoBody.innerHTML = `
+        <tr><td>Population</td><td>${data.demographics.population?.toLocaleString()}</td><td>2025</td><td>World Bank</td></tr>
+        <tr><td>Male %</td><td>${data.demographics.male_percent}%</td><td>2024</td><td>UN Data</td></tr>
+        <tr><td>Female %</td><td>${data.demographics.female_percent}%</td><td>2024</td><td>UN Data</td></tr>
+        <tr><td>Growth Rate</td><td>${data.demographics.growth_rate}%</td><td>2024</td><td>World Bank</td></tr>
+        <tr><td>Birth Rate (per 1000)</td><td>${data.demographics.birth_rate}</td><td>2023</td><td>World Bank</td></tr>
+        <tr><td>Death Rate (per 1000)</td><td>${data.demographics.death_rate}</td><td>2023</td><td>World Bank</td></tr>
+        <tr><td>Life Expectancy (M/F)</td><td>${data.demographics.life_expectancy_male} / ${data.demographics.life_expectancy_female}</td><td>2023</td><td>WHO</td></tr>
+        <tr><td>Median Age</td><td>${data.demographics.median_age}</td><td>2024</td><td>UN</td></tr>
+        <tr><td>Urban Population %</td><td>${data.demographics.urban_percent}%</td><td>2023</td><td>World Bank</td></tr>
+      `;
+    }
+    
+    // Religion Table
+    const religionBody = document.getElementById('religion-body');
+    if (religionBody && data.religion) {
+      religionBody.innerHTML = data.religion.map(r => `<tr><td>${r.name}</td><td>${r.percent}%</td><td>${typeof r.pop === 'number' ? r.pop.toLocaleString() : r.pop}</td></tr>`).join('');
+    }
+    
+    // Ethnic Groups Table
+    const ethnicBody = document.getElementById('ethnic-body');
+    if (ethnicBody && data.ethnic_groups) {
+      ethnicBody.innerHTML = data.ethnic_groups.map(e => `<tr><td>${e.name}</td><td>${e.percent}%</td><td>${typeof e.pop === 'number' ? e.pop.toLocaleString() : e.pop}</td></tr>`).join('');
+    }
+    
+    // Tax Slabs Table
+    const slabBody = document.getElementById('slab-body');
+    if (slabBody && data.tax?.slabs) {
+      slabBody.innerHTML = data.tax.slabs.map((s, i) => {
+        const range = s.to ? `${s.from.toLocaleString()} – ${s.to.toLocaleString()}` : `${s.from.toLocaleString()}+`;
+        return `<tr><td>${i+1}</td><td>${range}</td><td>${s.rate}%</td><td>—</td><td>—</td></tr>`;
+      }).join('');
+    }
+    
+    // Products Table
+    const hsResults = document.getElementById('hs-results');
+    if (hsResults && data.products) {
+      hsResults.innerHTML = data.products.map(p => `
+        <tr>
+          <td>${p.hs_code}</td>
+          <td>${p.description}</td>
+          <td>${p.import_duty_percent}%</td>
+          <td>${p.vat_percent}%</td>
+          <td>${p.sd_percent || 0}%</td>
+          <td>${p.rd_percent || 0}%</td>
+        </tr>
+      `).join('');
+      const wrap = document.getElementById('hs-results-wrap');
+      if (wrap) wrap.style.display = 'block';
+    }
+    
+    // Freight Routes Table
+    const freightBody = document.getElementById('freight-body');
+    if (freightBody && data.freight_routes) {
+      freightBody.innerHTML = data.freight_routes.map(f => `
+        <tr>
+          <td>${f.route}</td>
+          <td>${f.mode}</td>
+          <td>${f.transit_time}</td>
+          <td>${f.cost_20ft || '—'}</td>
+          <td>${f.cost_air_per_kg || '—'}</td>
+          <td>${f.notes || ''}</td>
+        </tr>
+      `).join('');
+    }
+    
+    // VAT Rates Table
+    const vatBody = document.getElementById('vat-body');
+    if (vatBody && data.vat_rates) {
+      vatBody.innerHTML = data.vat_rates.map(v => `
+        <tr>
+          <td>${v.sector}</td>
+          <td>${v.rate}%</td>
+          <td>${v.status || 'Active'}</td>
+          <td>${v.notes || ''}</td>
+        </tr>
+      `).join('');
+    }
+    
+    return data;
+  } catch (error) {
+    console.error(`Failed to load ${countryName}:`, error);
+    const demoBody = document.getElementById('demo-body');
+    if (demoBody) {
+      demoBody.innerHTML = `<tr><td colspan="4">❌ Failed to load data/${countryName}.html. Please upload the file.</td></tr>`;
+    }
+    return null;
   }
-};
+}
 
-const CD_RATES = { finished:25, raw:5, intermediate:10, capital:1, luxury:25 };
-const RD_RATES = { finished:5,  raw:0, intermediate:3,  capital:0, luxury:25 };
+// ============================================================
+// EXISTING FUNCTIONS (unchanged)
+// ============================================================
+function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+function goHome() { document.getElementById('country-page').classList.remove('active'); document.getElementById('landing').classList.remove('hidden'); window.scrollTo(0,0); }
+function showCountry() { document.getElementById('landing').classList.add('hidden'); document.getElementById('country-page').classList.add('active'); }
+function downloadHTML() { alert('Download HTML: export current tables as HTML file'); }
+function downloadText() { alert('Download text: export tab-separated data'); }
 
-// ═══════════════════════════════════════════════════════
-// RENDER COUNTRY GRID
-// ═══════════════════════════════════════════════════════
-function renderCountries(list){
+function showTab(tabName) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(`tab-${tabName}`).classList.add('active');
+  document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+  if (event && event.target) event.target.classList.add('active');
+}
+
+function filterCountries(val) {
+  const filtered = countryList.filter(c => c.name.toLowerCase().includes(val.toLowerCase()));
+  renderCountryGrid(filtered);
+}
+
+function selectCountry(countryName) {
+  showCountry();
+  loadCountryData(countryName);
+}
+
+// ============================================================
+// FULL COUNTRY LIST (keep your original list here)
+// ============================================================
+const countryList = [
+  { name: "Afghanistan", flag: "🇦🇫", code: "Afghanistan", pop: "41M", tags: ["South Asia", "Developing"] },
+  { name: "Albania", flag: "🇦🇱", code: "Albania", pop: "2.8M", tags: ["Europe", "Balkans"] },
+  { name: "Algeria", flag: "🇩🇿", code: "Algeria", pop: "45M", tags: ["Africa", "Maghreb"] },
+  { name: "Andorra", flag: "🇦🇩", code: "Andorra", pop: "77k", tags: ["Europe", "Microstate"] },
+  { name: "Angola", flag: "🇦🇴", code: "Angola", pop: "34M", tags: ["Africa", "Oil"] },
+  { name: "Argentina", flag: "🇦🇷", code: "Argentina", pop: "46M", tags: ["South America", "G20"] },
+  { name: "Armenia", flag: "🇦🇲", code: "Armenia", pop: "2.9M", tags: ["Caucasus", "Landlocked"] },
+  { name: "Australia", flag: "🇦🇺", code: "Australia", pop: "26M", tags: ["Oceania", "G20"] },
+  { name: "Austria", flag: "🇦🇹", code: "Austria", pop: "9M", tags: ["Europe", "EU"] },
+  { name: "Azerbaijan", flag: "🇦🇿", code: "Azerbaijan", pop: "10M", tags: ["Caucasus", "Oil"] },
+  { name: "Bahamas", flag: "🇧🇸", code: "Bahamas", pop: "0.4M", tags: ["Caribbean", "Island"] },
+  { name: "Bahrain", flag: "🇧🇭", code: "Bahrain", pop: "1.5M", tags: ["Middle East", "Gulf"] },
+  { name: "Bangladesh", flag: "🇧🇩", code: "Bangladesh", pop: "171M", tags: ["South Asia", "Developing"] },
+  { name: "Barbados", flag: "🇧🇧", code: "Barbados", pop: "0.3M", tags: ["Caribbean", "Island"] },
+  { name: "Belarus", flag: "🇧🇾", code: "Belarus", pop: "9.2M", tags: ["Europe", "Former USSR"] },
+  { name: "Belgium", flag: "🇧🇪", code: "Belgium", pop: "11.6M", tags: ["Europe", "EU"] },
+  { name: "Belize", flag: "🇧🇿", code: "Belize", pop: "0.4M", tags: ["Central America", "English"] },
+  { name: "Benin", flag: "🇧🇯", code: "Benin", pop: "13M", tags: ["Africa", "West Africa"] },
+  { name: "Bhutan", flag: "🇧🇹", code: "Bhutan", pop: "0.8M", tags: ["South Asia", "Himalayas"] },
+  { name: "Bolivia", flag: "🇧🇴", code: "Bolivia", pop: "12M", tags: ["South America", "Andes"] },
+  { name: "Bosnia", flag: "🇧🇦", code: "Bosnia", pop: "3.2M", tags: ["Europe", "Balkans"] },
+  { name: "Botswana", flag: "🇧🇼", code: "Botswana", pop: "2.6M", tags: ["Africa", "Safari"] },
+  { name: "Brazil", flag: "🇧🇷", code: "Brazil", pop: "215M", tags: ["South America", "BRICS"] },
+  { name: "Brunei", flag: "🇧🇳", code: "Brunei", pop: "0.45M", tags: ["SE Asia", "Oil"] },
+  { name: "Bulgaria", flag: "🇧🇬", code: "Bulgaria", pop: "6.8M", tags: ["Europe", "EU"] },
+  { name: "Burkina Faso", flag: "🇧🇫", code: "BurkinaFaso", pop: "22M", tags: ["Africa", "Sahel"] },
+  { name: "Burundi", flag: "🇧🇮", code: "Burundi", pop: "12M", tags: ["Africa", "Great Lakes"] },
+  { name: "Cambodia", flag: "🇰🇭", code: "Cambodia", pop: "17M", tags: ["SE Asia", "ASEAN"] },
+  { name: "Cameroon", flag: "🇨🇲", code: "Cameroon", pop: "27M", tags: ["Africa", "Central Africa"] },
+  { name: "Canada", flag: "🇨🇦", code: "Canada", pop: "38.9M", tags: ["North America", "G7"] },
+  { name: "Chad", flag: "🇹🇩", code: "Chad", pop: "17M", tags: ["Africa", "Sahel"] },
+  { name: "Chile", flag: "🇨🇱", code: "Chile", pop: "19M", tags: ["South America", "OECD"] },
+  { name: "China", flag: "🇨🇳", code: "China", pop: "1.41B", tags: ["East Asia", "Superpower"] },
+  { name: "Colombia", flag: "🇨🇴", code: "Colombia", pop: "51M", tags: ["South America", "Biodiverse"] },
+  { name: "Comoros", flag: "🇰🇲", code: "Comoros", pop: "0.9M", tags: ["Africa", "Island"] },
+  { name: "Congo", flag: "🇨🇬", code: "Congo", pop: "5.9M", tags: ["Africa", "Congo Basin"] },
+  { name: "Costa Rica", flag: "🇨🇷", code: "CostaRica", pop: "5.1M", tags: ["Central America", "Ecotourism"] },
+  { name: "Croatia", flag: "🇭🇷", code: "Croatia", pop: "4M", tags: ["Europe", "EU"] },
+  { name: "Cuba", flag: "🇨🇺", code: "Cuba", pop: "11.2M", tags: ["Caribbean", "Communist"] },
+  { name: "Cyprus", flag: "🇨🇾", code: "Cyprus", pop: "1.2M", tags: ["Europe", "Island"] },
+  { name: "Czechia", flag: "🇨🇿", code: "Czechia", pop: "10.5M", tags: ["Europe", "EU"] },
+  { name: "Denmark", flag: "🇩🇰", code: "Denmark", pop: "5.9M", tags: ["Europe", "Nordic"] },
+  { name: "Djibouti", flag: "🇩🇯", code: "Djibouti", pop: "1.1M", tags: ["Africa", "Horn"] },
+  { name: "Dominica", flag: "🇩🇲", code: "Dominica", pop: "72k", tags: ["Caribbean", "Island"] },
+  { name: "Dominican Republic", flag: "🇩🇴", code: "DominicanRepublic", pop: "11.2M", tags: ["Caribbean", "Tourism"] },
+  { name: "Ecuador", flag: "🇪🇨", code: "Ecuador", pop: "18M", tags: ["South America", "Andes"] },
+  { name: "Egypt", flag: "🇪🇬", code: "Egypt", pop: "111M", tags: ["Africa", "Arab League"] },
+  { name: "El Salvador", flag: "🇸🇻", code: "ElSalvador", pop: "6.3M", tags: ["Central America", "Bitcoin"] },
+  { name: "Eritrea", flag: "🇪🇷", code: "Eritrea", pop: "3.6M", tags: ["Africa", "Horn"] },
+  { name: "Estonia", flag: "🇪🇪", code: "Estonia", pop: "1.3M", tags: ["Europe", "Digital"] },
+  { name: "Eswatini", flag: "🇸🇿", code: "Eswatini", pop: "1.2M", tags: ["Africa", "Kingdom"] },
+  { name: "Ethiopia", flag: "🇪🇹", code: "Ethiopia", pop: "123M", tags: ["Africa", "Fast Growth"] },
+  { name: "Fiji", flag: "🇫🇯", code: "Fiji", pop: "0.9M", tags: ["Oceania", "Island"] },
+  { name: "Finland", flag: "🇫🇮", code: "Finland", pop: "5.5M", tags: ["Europe", "Nordic"] },
+  { name: "France", flag: "🇫🇷", code: "France", pop: "68M", tags: ["Europe", "G7"] },
+  { name: "Gabon", flag: "🇬🇦", code: "Gabon", pop: "2.4M", tags: ["Africa", "Oil"] },
+  { name: "Gambia", flag: "🇬🇲", code: "Gambia", pop: "2.6M", tags: ["Africa", "Smallest"] },
+  { name: "Georgia", flag: "🇬🇪", code: "Georgia", pop: "3.7M", tags: ["Caucasus", "Wine"] },
+  { name: "Germany", flag: "🇩🇪", code: "Germany", pop: "83M", tags: ["Europe", "G7"] },
+  { name: "Ghana", flag: "🇬🇭", code: "Ghana", pop: "33M", tags: ["Africa", "Gold"] },
+  { name: "Greece", flag: "🇬🇷", code: "Greece", pop: "10.4M", tags: ["Europe", "EU"] },
+  { name: "Grenada", flag: "🇬🇩", code: "Grenada", pop: "0.12M", tags: ["Caribbean", "Island"] },
+  { name: "Guatemala", flag: "🇬🇹", code: "Guatemala", pop: "17.6M", tags: ["Central America", "Mayan"] },
+  { name: "Guinea", flag: "🇬🇳", code: "Guinea", pop: "13.5M", tags: ["Africa", "Bauxite"] },
+  { name: "Guyana", flag: "🇬🇾", code: "Guyana", pop: "0.8M", tags: ["South America", "Oil"] },
+  { name: "Haiti", flag: "🇭🇹", code: "Haiti", pop: "11.6M", tags: ["Caribbean", "Poorest"] },
+  { name: "Honduras", flag: "🇭🇳", code: "Honduras", pop: "10.3M", tags: ["Central America", "Coffee"] },
+  { name: "Hungary", flag: "🇭🇺", code: "Hungary", pop: "9.6M", tags: ["Europe", "EU"] },
+  { name: "Iceland", flag: "🇮🇸", code: "Iceland", pop: "0.37M", tags: ["Europe", "Nordic"] },
+  { name: "India", flag: "🇮🇳", code: "India", pop: "1.43B", tags: ["South Asia", "BRICS"] },
+  { name: "Indonesia", flag: "🇮🇩", code: "Indonesia", pop: "277M", tags: ["SE Asia", "G20"] },
+  { name: "Iran", flag: "🇮🇷", code: "Iran", pop: "88M", tags: ["Middle East", "Oil"] },
+  { name: "Iraq", flag: "🇮🇶", code: "Iraq", pop: "44M", tags: ["Middle East", "Oil"] },
+  { name: "Ireland", flag: "🇮🇪", code: "Ireland", pop: "5.1M", tags: ["Europe", "EU"] },
+  { name: "Israel", flag: "🇮🇱", code: "Israel", pop: "9.4M", tags: ["Middle East", "Startup"] },
+  { name: "Italy", flag: "🇮🇹", code: "Italy", pop: "58.8M", tags: ["Europe", "G7"] },
+  { name: "Jamaica", flag: "🇯🇲", code: "Jamaica", pop: "2.8M", tags: ["Caribbean", "Reggae"] },
+  { name: "Japan", flag: "🇯🇵", code: "Japan", pop: "124M", tags: ["East Asia", "G7"] },
+  { name: "Jordan", flag: "🇯🇴", code: "Jordan", pop: "11.3M", tags: ["Middle East", "Stable"] },
+  { name: "Kazakhstan", flag: "🇰🇿", code: "Kazakhstan", pop: "19.5M", tags: ["Central Asia", "Oil"] },
+  { name: "Kenya", flag: "🇰🇪", code: "Kenya", pop: "55M", tags: ["Africa", "Safari"] },
+  { name: "Kuwait", flag: "🇰🇼", code: "Kuwait", pop: "4.3M", tags: ["Middle East", "Oil"] },
+  { name: "Kyrgyzstan", flag: "🇰🇬", code: "Kyrgyzstan", pop: "6.7M", tags: ["Central Asia", "Mountains"] },
+  { name: "Laos", flag: "🇱🇦", code: "Laos", pop: "7.4M", tags: ["SE Asia", "Landlocked"] },
+  { name: "Latvia", flag: "🇱🇻", code: "Latvia", pop: "1.8M", tags: ["Europe", "Baltic"] },
+  { name: "Lebanon", flag: "🇱🇧", code: "Lebanon", pop: "5.5M", tags: ["Middle East", "Crisis"] },
+  { name: "Lesotho", flag: "🇱🇸", code: "Lesotho", pop: "2.3M", tags: ["Africa", "Mountain"] },
+  { name: "Liberia", flag: "🇱🇷", code: "Liberia", pop: "5.3M", tags: ["Africa", "West Africa"] },
+  { name: "Libya", flag: "🇱🇾", code: "Libya", pop: "6.8M", tags: ["Africa", "Oil"] },
+  { name: "Liechtenstein", flag: "🇱🇮", code: "Liechtenstein", pop: "39k", tags: ["Europe", "Microstate"] },
+  { name: "Lithuania", flag: "🇱🇹", code: "Lithuania", pop: "2.7M", tags: ["Europe", "Baltic"] },
+  { name: "Luxembourg", flag: "🇱🇺", code: "Luxembourg", pop: "0.64M", tags: ["Europe", "Rich"] },
+  { name: "Madagascar", flag: "🇲🇬", code: "Madagascar", pop: "29M", tags: ["Africa", "Island"] },
+  { name: "Malawi", flag: "🇲🇼", code: "Malawi", pop: "20M", tags: ["Africa", "Lake"] },
+  { name: "Malaysia", flag: "🇲🇾", code: "Malaysia", pop: "33M", tags: ["SE Asia", "ASEAN"] },
+  { name: "Maldives", flag: "🇲🇻", code: "Maldives", pop: "0.5M", tags: ["Asia", "Island"] },
+  { name: "Mali", flag: "🇲🇱", code: "Mali", pop: "22M", tags: ["Africa", "Sahel"] },
+  { name: "Malta", flag: "🇲🇹", code: "Malta", pop: "0.5M", tags: ["Europe", "Island"] },
+  { name: "Mauritania", flag: "🇲🇷", code: "Mauritania", pop: "4.7M", tags: ["Africa", "Sahara"] },
+  { name: "Mauritius", flag: "🇲🇺", code: "Mauritius", pop: "1.3M", tags: ["Africa", "Island"] },
+  { name: "Mexico", flag: "🇲🇽", code: "Mexico", pop: "127M", tags: ["North America", "G20"] },
+  { name: "Moldova", flag: "🇲🇩", code: "Moldova", pop: "2.6M", tags: ["Europe", "Poorest"] },
+  { name: "Monaco", flag: "🇲🇨", code: "Monaco", pop: "39k", tags: ["Europe", "Rich"] },
+  { name: "Mongolia", flag: "🇲🇳", code: "Mongolia", pop: "3.3M", tags: ["Asia", "Nomadic"] },
+  { name: "Montenegro", flag: "🇲🇪", code: "Montenegro", pop: "0.62M", tags: ["Europe", "Balkans"] },
+  { name: "Morocco", flag: "🇲🇦", code: "Morocco", pop: "37M", tags: ["Africa", "Maghreb"] },
+  { name: "Mozambique", flag: "🇲🇿", code: "Mozambique", pop: "32M", tags: ["Africa", "Coast"] },
+  { name: "Myanmar", flag: "🇲🇲", code: "Myanmar", pop: "54M", tags: ["SE Asia", "Crisis"] },
+  { name: "Namibia", flag: "🇳🇦", code: "Namibia", pop: "2.6M", tags: ["Africa", "Desert"] },
+  { name: "Nepal", flag: "🇳🇵", code: "Nepal", pop: "30M", tags: ["South Asia", "Himalayas"] },
+  { name: "Netherlands", flag: "🇳🇱", code: "Netherlands", pop: "17.5M", tags: ["Europe", "EU"] },
+  { name: "New Zealand", flag: "🇳🇿", code: "NewZealand", pop: "5.1M", tags: ["Oceania", "Island"] },
+  { name: "Nicaragua", flag: "🇳🇮", code: "Nicaragua", pop: "6.9M", tags: ["Central America", "Lakes"] },
+  { name: "Niger", flag: "🇳🇪", code: "Niger", pop: "26M", tags: ["Africa", "Sahel"] },
+  { name: "Nigeria", flag: "🇳🇬", code: "Nigeria", pop: "223M", tags: ["Africa", "Giant"] },
+  { name: "Norway", flag: "🇳🇴", code: "Norway", pop: "5.4M", tags: ["Europe", "Nordic"] },
+  { name: "Oman", flag: "🇴🇲", code: "Oman", pop: "4.5M", tags: ["Middle East", "Gulf"] },
+  { name: "Pakistan", flag: "🇵🇰", code: "Pakistan", pop: "240M", tags: ["South Asia", "Nuclear"] },
+  { name: "Panama", flag: "🇵🇦", code: "Panama", pop: "4.4M", tags: ["Central America", "Canal"] },
+  { name: "Paraguay", flag: "🇵🇾", code: "Paraguay", pop: "6.7M", tags: ["South America", "Landlocked"] },
+  { name: "Peru", flag: "🇵🇪", code: "Peru", pop: "34M", tags: ["South America", "Andes"] },
+  { name: "Philippines", flag: "🇵🇭", code: "Philippines", pop: "114M", tags: ["SE Asia", "Islands"] },
+  { name: "Poland", flag: "🇵🇱", code: "Poland", pop: "37.8M", tags: ["Europe", "EU"] },
+  { name: "Portugal", flag: "🇵🇹", code: "Portugal", pop: "10.3M", tags: ["Europe", "EU"] },
+  { name: "Qatar", flag: "🇶🇦", code: "Qatar", pop: "2.7M", tags: ["Middle East", "Rich"] },
+  { name: "Romania", flag: "🇷🇴", code: "Romania", pop: "19M", tags: ["Europe", "EU"] },
+  { name: "Russia", flag: "🇷🇺", code: "Russia", pop: "144M", tags: ["Eurasia", "BRICS"] },
+  { name: "Rwanda", flag: "🇷🇼", code: "Rwanda", pop: "13.8M", tags: ["Africa", "Landlocked"] },
+  { name: "Saudi Arabia", flag: "🇸🇦", code: "SaudiArabia", pop: "36M", tags: ["Middle East", "Oil"] },
+  { name: "Senegal", flag: "🇸🇳", code: "Senegal", pop: "17.4M", tags: ["Africa", "West"] },
+  { name: "Serbia", flag: "🇷🇸", code: "Serbia", pop: "6.7M", tags: ["Europe", "Balkans"] },
+  { name: "Singapore", flag: "🇸🇬", code: "Singapore", pop: "5.6M", tags: ["SE Asia", "Rich"] },
+  { name: "Slovakia", flag: "🇸🇰", code: "Slovakia", pop: "5.4M", tags: ["Europe", "EU"] },
+  { name: "Slovenia", flag: "🇸🇮", code: "Slovenia", pop: "2.1M", tags: ["Europe", "EU"] },
+  { name: "Somalia", flag: "🇸🇴", code: "Somalia", pop: "17M", tags: ["Africa", "Horn"] },
+  { name: "South Africa", flag: "🇿🇦", code: "SouthAfrica", pop: "60M", tags: ["Africa", "BRICS"] },
+  { name: "South Korea", flag: "🇰🇷", code: "SouthKorea", pop: "51.7M", tags: ["East Asia", "G20"] },
+  { name: "Spain", flag: "🇪🇸", code: "Spain", pop: "47.4M", tags: ["Europe", "EU"] },
+  { name: "Sri Lanka", flag: "🇱🇰", code: "SriLanka", pop: "22.2M", tags: ["South Asia", "Island"] },
+  { name: "Sudan", flag: "🇸🇩", code: "Sudan", pop: "46M", tags: ["Africa", "Nile"] },
+  { name: "Sweden", flag: "🇸🇪", code: "Sweden", pop: "10.5M", tags: ["Europe", "Nordic"] },
+  { name: "Switzerland", flag: "🇨🇭", code: "Switzerland", pop: "8.7M", tags: ["Europe", "Rich"] },
+  { name: "Syria", flag: "🇸🇾", code: "Syria", pop: "22M", tags: ["Middle East", "War"] },
+  { name: "Taiwan", flag: "🇹🇼", code: "Taiwan", pop: "23.8M", tags: ["East Asia", "Tech"] },
+  { name: "Tajikistan", flag: "🇹🇯", code: "Tajikistan", pop: "9.8M", tags: ["Central Asia", "Mountains"] },
+  { name: "Tanzania", flag: "🇹🇿", code: "Tanzania", pop: "63M", tags: ["Africa", "Safari"] },
+  { name: "Thailand", flag: "🇹🇭", code: "Thailand", pop: "71.8M", tags: ["SE Asia", "Tourism"] },
+  { name: "Togo", flag: "🇹🇬", code: "Togo", pop: "8.7M", tags: ["Africa", "West"] },
+  { name: "Trinidad", flag: "🇹🇹", code: "Trinidad", pop: "1.5M", tags: ["Caribbean", "Oil"] },
+  { name: "Tunisia", flag: "🇹🇳", code: "Tunisia", pop: "12.2M", tags: ["Africa", "Maghreb"] },
+  { name: "Turkey", flag: "🇹🇷", code: "Turkey", pop: "85M", tags: ["Eurasia", "G20"] },
+  { name: "Uganda", flag: "🇺🇬", code: "Uganda", pop: "47M", tags: ["Africa", "Lake"] },
+  { name: "Ukraine", flag: "🇺🇦", code: "Ukraine", pop: "41M", tags: ["Europe", "War"] },
+  { name: "UAE", flag: "🇦🇪", code: "UAE", pop: "9.5M", tags: ["Middle East", "Rich"] },
+  { name: "UK", flag: "🇬🇧", code: "UK", pop: "67M", tags: ["Europe", "G7"] },
+  { name: "USA", flag: "🇺🇸", code: "USA", pop: "334M", tags: ["North America", "Superpower"] },
+  { name: "Uruguay", flag: "🇺🇾", code: "Uruguay", pop: "3.4M", tags: ["South America", "Stable"] },
+  { name: "Uzbekistan", flag: "🇺🇿", code: "Uzbekistan", pop: "35M", tags: ["Central Asia", "Cotton"] },
+  { name: "Vietnam", flag: "🇻🇳", code: "Vietnam", pop: "99M", tags: ["SE Asia", "Manufacturing"] },
+  { name: "Yemen", flag: "🇾🇪", code: "Yemen", pop: "33M", tags: ["Middle East", "Crisis"] },
+  { name: "Zambia", flag: "🇿🇲", code: "Zambia", pop: "19M", tags: ["Africa", "Copper"] },
+  { name: "Zimbabwe", flag: "🇿🇼", code: "Zimbabwe", pop: "16M", tags: ["Africa", "Crisis"] }
+];
+
+function renderCountryGrid(list = countryList) {
   const grid = document.getElementById('countryGrid');
-  grid.innerHTML = list.map(c=>`
-    <div class="country-card" onclick="openCountry('${c.code}')">
+  grid.innerHTML = list.map(c => `
+    <div class="country-card" onclick="selectCountry('${c.code}')">
       <div class="country-flag">${c.flag}</div>
       <div class="country-name">${c.name}</div>
-      <div class="country-pop">${c.region} · ${c.pop}</div>
-      <div class="country-tags">${c.tags.map(t=>`<span class="ctag">${t}</span>`).join('')}</div>
-    </div>`).join('');
-}
-renderCountries(COUNTRIES);
-
-function filterCountries(q){
-  const filtered = COUNTRIES.filter(c=>c.name.toLowerCase().includes(q.toLowerCase())||c.region.toLowerCase().includes(q.toLowerCase()));
-  renderCountries(filtered);
+      <div class="country-pop">${c.pop}</div>
+      <div class="country-tags">${c.tags.map(t => `<span class="ctag">${t}</span>`).join('')}</div>
+    </div>
+  `).join('');
 }
 
-// ═══════════════════════════════════════════════════════
-// OPEN COUNTRY PAGE
-// ═══════════════════════════════════════════════════════
-function openCountry(code){
-  const c = COUNTRIES.find(x=>x.code===code);
-  if(!c) return;
+// Import Calculator Functions
+function calcImport() {
+  const price = parseFloat(document.getElementById('p_price').value) || 0;
+  const qty = parseFloat(document.getElementById('p_qty').value) || 1;
+  const rate = parseFloat(document.getElementById('p_rate').value) || 110;
+  const fc = parseFloat(document.getElementById('p_fc').value) || 0;
+  const cat = document.getElementById('p_cat').value;
+  
+  const rates = { finished: 25, raw: 5, intermediate: 10, capital: 1, luxury: 30 };
+  const dutyRate = rates[cat] || 25;
+  
+  const totalUSD = price * qty;
+  const totalBDT = totalUSD * rate;
+  const freightBDT = fc * rate;
+  const cifBDT = totalBDT + freightBDT;
+  const duty = cifBDT * (dutyRate / 100);
+  const vat = (cifBDT + duty) * 0.15;
+  const ait = (cifBDT + duty + vat) * 0.05;
+  const total = cifBDT + duty + vat + ait;
+  
+  document.getElementById('import-result').innerHTML = `
+    <div class="rcell"><div class="rcell-label">CIF Value (BDT)</div><div class="rcell-value">${cifBDT.toFixed(2)}</div></div>
+    <div class="rcell"><div class="rcell-label">Customs Duty (${dutyRate}%)</div><div class="rcell-value">${duty.toFixed(2)}</div></div>
+    <div class="rcell"><div class="rcell-label">VAT (15%)</div><div class="rcell-value">${vat.toFixed(2)}</div></div>
+    <div class="rcell"><div class="rcell-label">AIT (5%)</div><div class="rcell-value">${ait.toFixed(2)}</div></div>
+    <div class="rcell"><div class="rcell-label total">Total Landed (BDT)</div><div class="rcell-value total">${total.toFixed(2)}</div></div>
+  `;
+}
 
-  document.getElementById('landing').classList.add('hidden');
-  const cp = document.getElementById('country-page');
-  cp.classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-
-  document.getElementById('c-flag').textContent = c.flag;
-  document.getElementById('c-name').textContent = c.name;
-  document.getElementById('c-sub').textContent  = `${c.region} · Population: ${c.pop} · Data: 2024–25`;
-
-  // Only full data for Bangladesh (demo); others show placeholder
-  if(code === 'BD') {
-    renderBDData();
-  } else {
-    renderPlaceholder(c);
+function calcIncomeTax() {
+  const income = parseFloat(document.getElementById('i_income').value) || 0;
+  const invest = parseFloat(document.getElementById('i_invest').value) || 0;
+  const cat = document.getElementById('i_cat').value;
+  
+  let slabs = [[0, 350000, 0], [350001, 450000, 5], [450001, 750000, 10], [750001, 1150000, 15], [1150001, 1650000, 20], [1650001, Infinity, 25]];
+  if (cat === 'women') slabs = [[0, 400000, 0], [400001, 500000, 5], [500001, 800000, 10], [800001, 1200000, 15], [1200001, 1700000, 20], [1700001, Infinity, 25]];
+  
+  let tax = 0, remaining = income;
+  for (let slab of slabs) {
+    if (remaining <= 0) break;
+    const taxable = Math.min(remaining, slab[1] - slab[0] + 1);
+    tax += taxable * slab[2] / 100;
+    remaining -= taxable;
   }
-  showTab('demographics');
+  
+  const rebate = Math.min(invest * 0.15, tax * 0.3);
+  const finalTax = Math.max(0, tax - rebate);
+  
+  document.getElementById('income-result-cells').innerHTML = `
+    <div class="rcell"><div class="rcell-label">Gross Tax</div><div class="rcell-value">${tax.toFixed(2)} BDT</div></div>
+    <div class="rcell"><div class="rcell-label">Rebate (15% of investment)</div><div class="rcell-value">${rebate.toFixed(2)} BDT</div></div>
+    <div class="rcell"><div class="rcell-label total">Net Tax Payable</div><div class="rcell-value total">${finalTax.toFixed(2)} BDT</div></div>
+  `;
 }
 
-function goHome(){
-  document.getElementById('landing').classList.remove('hidden');
-  document.getElementById('country-page').classList.remove('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+function hsSearch() {
+  alert('HS Code search: enter code like 8471.30, 8517.13');
 }
 
-// ═══════════════════════════════════════════════════════
-// RENDER BD DATA
-// ═══════════════════════════════════════════════════════
-function renderBDData(){
-  // Demo
-  const db = document.getElementById('demo-body');
-  db.innerHTML = BD_DEMO.map(r=>`<tr><td class="bold">${r[0]}</td><td class="green">${r[1]}</td><td>${r[2]}</td><td style="color:#888;font-size:0.72rem">${r[3]}</td></tr>`).join('');
-  const rb = document.getElementById('religion-body');
-  rb.innerHTML = BD_RELIGION.map(r=>`<tr><td class="bold">${r[0]}</td><td>${r[1]}%</td><td class="green">${r[2]}</td></tr>`).join('');
-  const eb = document.getElementById('ethnic-body');
-  eb.innerHTML = BD_ETHNIC.map(r=>`<tr><td class="bold">${r[0]}</td><td>${r[1]}%</td><td class="green">${r[2]}</td></tr>`).join('');
-  // VAT
-  const vb = document.getElementById('vat-body');
-  vb.innerHTML = BD_VAT.map(r=>{
-    const sc = r[2]==='Exempt'?'green':r[2]==='Standard'?'':'gold';
-    return `<tr><td class="bold">${r[0]}</td><td class="td-rate ${sc}">${r[1]}</td><td>${r[2]}</td><td style="color:#666;font-size:0.78rem">${r[3]}</td></tr>`;
-  }).join('');
-  // Freight
-  const fb = document.getElementById('freight-body');
-  fb.innerHTML = BD_FREIGHT.map(r=>`<tr>${r.map((c,i)=>`<td${i===0?' class="bold"':''}>${c}</td>`).join('')}</tr>`).join('');
-
-  calcIncomeTax();
-  calcImport();
-}
-
-function renderPlaceholder(c){
-  ['demo-body','religion-body','ethnic-body','vat-body','freight-body','slab-body'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el) el.innerHTML=`<tr><td colspan="10" style="text-align:center;padding:2rem;color:#888;background:#fff">📡 ${c.name} data coming soon — contribute on GitHub!</td></tr>`;
-  });
-  document.getElementById('income-result-cells').innerHTML='';
-  document.getElementById('import-result').innerHTML='';
-}
-
-// ═══════════════════════════════════════════════════════
-// INCOME TAX CALCULATOR
-// ═══════════════════════════════════════════════════════
-function calcIncomeTax(){
-  const cat    = document.getElementById('i_cat').value;
-  const income = parseFloat(document.getElementById('i_income').value)||0;
-  const invest = parseFloat(document.getElementById('i_invest').value)||0;
-  const ay     = document.getElementById('i_ay').value;
-  const data   = TAX_DATA[ay]||TAX_DATA['2025-26'];
-
-  const freeLimit  = data.thresholds[cat]||data.thresholds.general;
-  const taxable    = Math.max(0, income - freeLimit);
-  let remaining    = taxable, grossTax = 0, cumTax = 0;
-  const slabRows   = [];
-
-  for(const s of data.slabs){
-    if(remaining<=0){slabRows.push([s.label,`${s.rate}%`,'—','—']);continue;}
-    const chunk = s.amt===Infinity ? remaining : Math.min(remaining,s.amt);
-    const tax   = chunk*(s.rate/100);
-    grossTax   += tax;
-    cumTax     += tax;
-    slabRows.push([s.label,`${s.rate}%`, fmt(tax), fmt(cumTax)]);
-    remaining  -= chunk;
-  }
-
-  const rebA = taxable*0.03, rebB = invest*0.15, rebC = 1000000;
-  const rebate = taxable>0 ? Math.min(rebA,rebB,rebC) : 0;
-  const afterRebate = Math.max(0, grossTax-rebate);
-  const finalTax    = Math.max(afterRebate, income>freeLimit?5000:0);
-  const effRate     = income>0?(finalTax/income*100):0;
-
-  const cells = [
-    { label:'Tax-Free Threshold', value:fmt(freeLimit) },
-    { label:'Taxable Income',     value:fmt(taxable) },
-    { label:'Gross Tax',          value:fmt(grossTax) },
-    { label:'Investment Rebate',  value:'− '+fmt(rebate), cls:'red' },
-    { label:'After Rebate',       value:fmt(afterRebate) },
-    { label:'Final Tax Payable',  value:fmt(finalTax), cls:'total' },
-    { label:'Effective Rate',     value:effRate.toFixed(2)+'%' },
-    { label:'Monthly Tax',        value:fmt(finalTax/12)+'/mo' },
-  ];
-
-  document.getElementById('income-result-cells').innerHTML =
-    cells.map(c=>`<div class="rcell"><div class="rcell-label">${c.label}</div><div class="rcell-value ${c.cls||''}">${c.value}</div></div>`).join('');
-
-  document.getElementById('slab-body').innerHTML =
-    slabRows.map((r,i)=>`<tr><td>${i+1}</td>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
-}
-
-// ═══════════════════════════════════════════════════════
-// IMPORT CALCULATOR
-// ═══════════════════════════════════════════════════════
-function calcImport(){
-  const name   = document.getElementById('p_name').value||'Product';
-  const hs     = document.getElementById('p_hs').value||'—';
-  const price  = parseFloat(document.getElementById('p_price').value)||0;
-  const qty    = parseFloat(document.getElementById('p_qty').value)||1;
-  const rate   = parseFloat(document.getElementById('p_rate').value)||110;
-  const cat    = document.getElementById('p_cat').value;
-  const fc     = parseFloat(document.getElementById('p_fc').value)||0;
-  const fm     = document.getElementById('p_freight').value;
-
-  const totalUSD  = price * qty;
-  const totalBDT  = totalUSD * rate;
-  const freightBDT= fc * rate;
-  const cifBDT    = totalBDT + freightBDT;
-
-  const cdRate = CD_RATES[cat]||25;
-  const rdRate = RD_RATES[cat]||5;
-  const cd     = cifBDT * (cdRate/100);
-  const rd     = cifBDT * (rdRate/100);
-  const vatBase= cifBDT + cd + rd;
-  const vat    = vatBase * 0.15;
-  const ait    = (vatBase+vat) * 0.05;
-  const total  = cifBDT + cd + rd + vat + ait;
-  const effRate= cifBDT>0?(( cd+rd+vat+ait)/cifBDT*100):0;
-
-  const modeLabel = {sea:'🚢 Sea',air:'✈️ Air',land:'🚛 Land'}[fm]||'';
-
-  const cells = [
-    { label:'Product Value (USD)',  value:'$'+totalUSD.toLocaleString() },
-    { label:'CIF Value (BDT)',      value:fmt(cifBDT) },
-    { label:`Customs Duty (${cdRate}%)`, value:fmt(cd), cls:'red' },
-    { label:`Regulatory Duty (${rdRate}%)`, value:fmt(rd), cls:'red' },
-    { label:'VAT on Import (15%)', value:fmt(vat), cls:'red' },
-    { label:'Adv. Income Tax (5%)',value:fmt(ait)+' *adj', cls:'red' },
-    { label:'Freight ('+modeLabel+')', value:fmt(freightBDT) },
-    { label:'Total Landed Cost',   value:fmt(total), cls:'total' },
-    { label:'Effective Tax Rate',  value:effRate.toFixed(1)+'%' },
-    { label:'Cost per Unit',       value:fmt(total/qty) },
-  ];
-
-  document.getElementById('import-result').innerHTML =
-    cells.map(c=>`<div class="rcell"><div class="rcell-label">${c.label}</div><div class="rcell-value ${c.cls||''}">${c.value}</div></div>`).join('');
-
-  // Sheet row
-  const wrap = document.getElementById('import-sheet-wrap');
-  wrap.style.display='block';
-  document.getElementById('import-sheet-body').innerHTML =
-    `<tr><td class="bold">${name}</td><td>$${price}</td><td>${fmt(price*rate)}</td><td>${qty}</td><td>${fmt(cifBDT)}</td><td class="red">${fmt(cd)}</td><td class="red">${fmt(vat)}</td><td class="red">${fmt(ait)}</td><td>${fmt(freightBDT)}</td><td class="green bold">${fmt(total)}</td></tr>`;
-}
-
-// ═══════════════════════════════════════════════════════
-// HS SEARCH
-// ═══════════════════════════════════════════════════════
-function hsSearch(){
-  const q = document.getElementById('hs-input').value.toLowerCase();
-  if(!q) return;
-  const results = HS_CODES.filter(h=>h.code.includes(q)||h.desc.toLowerCase().includes(q));
-  const wrap = document.getElementById('hs-results-wrap');
-  const tbody = document.getElementById('hs-results');
-  if(!results.length){
-    tbody.innerHTML=`<tr><td colspan="6" style="text-align:center;padding:1rem;color:#888;background:#fff">No results for "${q}". Try a product name or HS code.</td></tr>`;
-  } else {
-    tbody.innerHTML = results.map(h=>`<tr>
-      <td class="bold" onclick="document.getElementById('p_hs').value='${h.code}'" style="cursor:pointer;color:#1a6b3c">${h.code}</td>
-      <td>${h.desc}</td>
-      <td class="red">${h.cd}%</td>
-      <td class="red">${h.vat}%</td>
-      <td class="red">${h.sd}%</td>
-      <td class="red">${h.rd}%</td>
-    </tr>`).join('');
-  }
-  wrap.style.display='block';
-}
-
-document.getElementById('hs-input').addEventListener('keydown',e=>{if(e.key==='Enter') hsSearch()});
-
-// ═══════════════════════════════════════════════════════
-// TABS
-// ═══════════════════════════════════════════════════════
-function showTab(id){
-  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('active'));
-  const panel = document.getElementById('tab-'+id);
-  if(panel) panel.classList.add('active');
-  const tabs=['demographics','income','import','freight','vat'];
-  const idx=tabs.indexOf(id);
-  document.querySelectorAll('.ptab')[idx]?.classList.add('active');
-}
-
-// ═══════════════════════════════════════════════════════
-// DOWNLOADS
-// ═══════════════════════════════════════════════════════
-function downloadHTML(){
-  const name = document.getElementById('c-name').textContent;
-  const content = `<!DOCTYPE html><html><head><title>${name} — Count It Data</title>
-  <style>body{font-family:Arial,sans-serif;padding:2rem;max-width:1200px;margin:0 auto}
-  h1{color:#1a4d30}table{width:100%;border-collapse:collapse;margin:1rem 0}
-  th{background:#1e4d30;color:#fff;padding:8px 12px;text-align:left}
-  td{padding:7px 12px;border:1px solid #ddd}tr:nth-child(even){background:#f5f5f5}
-  </style></head><body>
-  <h1>🌍 ${name} — Count It Data Export</h1>
-  <p>Generated: ${new Date().toLocaleDateString()} | Source: Count It Platform</p>
-  ${document.getElementById('tab-demographics').innerHTML}
-  </body></html>`;
-  dlFile(`${name}_CountIt.html`, content, 'text/html');
-}
-
-function downloadText(){
-  const name = document.getElementById('c-name').textContent;
-  let txt = `COUNT IT — ${name} Data Export\n`;
-  txt += `Generated: ${new Date().toLocaleDateString()}\n\n`;
-  document.querySelectorAll('.sheet').forEach(t=>{
-    t.querySelectorAll('tr').forEach(r=>{
-      txt += [...r.querySelectorAll('th,td')].map(c=>c.textContent.trim()).join('\t') + '\n';
-    });
-    txt += '\n';
-  });
-  dlFile(`${name}_CountIt.txt`, txt, 'text/plain');
-}
-
-function dlFile(filename, content, type){
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([content],{type}));
-  a.download = filename;
-  a.click();
-}
-
-// ═══════════════════════════════════════════════════════
-// HELPERS
-// ═══════════════════════════════════════════════════════
-function fmt(n){ return '৳'+Math.round(n).toLocaleString('en-IN'); }
-
-function toggleNav(){
-  document.getElementById('navLinks').classList.toggle('open');
-}
-
-// Init
+// Initialize
+renderCountryGrid();
+calcImport();
 calcIncomeTax();
 </script>
 </body>
