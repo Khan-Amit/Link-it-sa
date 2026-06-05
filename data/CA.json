@@ -1,4 +1,23 @@
 {
+  "country": "Canada",
+  "provinces": [
+    { "name": "Alberta", "count": 12 },
+    { "name": "British Columbia", "count": 8 },
+    { "name": "Manitoba", "count": 5 },
+    { "name": "New Brunswick", "count": 3 },
+    { "name": "Newfoundland and Labrador", "count": 2 },
+    { "name": "Nova Scotia", "count": 4 },
+    { "name": "Ontario", "count": 20 },
+    { "name": "Prince Edward Island", "count": 1 },
+    { "name": "Quebec", "count": 15 },
+    { "name": "Saskatchewan", "count": 6 },
+    { "name": "Northwest Territories", "count": 0 },
+    { "name": "Nunavut", "count": 0 },
+    { "name": "Yukon", "count": 0 }
+  ]
+}
+
+{
   "code": "CA",
   "country": "Canada",
   "flag": "🇨🇦",
