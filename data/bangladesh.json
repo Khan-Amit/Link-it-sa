@@ -1,0 +1,49 @@
+{
+  "country": "Bangladesh",
+  "flag": "🇧🇩",
+  "currency": "BDT",
+  "demographics": {
+    "population": 171186372,
+    "male_percent": 49.6,
+    "female_percent": 50.4,
+    "birth_rate_per_1000": 17.8,
+    "death_rate_per_1000": 5.5,
+    "growth_rate_percent": 1.23,
+    "urban_percent": 39.0
+  },
+  "tax": {
+    "tax_free_threshold": 350000,
+    "slabs": [
+      { "from": 0, "to": 350000, "rate": 0 },
+      { "from": 350001, "to": 450000, "rate": 5 },
+      { "from": 450001, "to": 850000, "rate": 10 },
+      { "from": 850001, "to": 1350000, "rate": 15 },
+      { "from": 1350001, "to": 1850000, "rate": 20 },
+      { "from": 1850001, "to": 3850000, "rate": 25 },
+      { "from": 3850001, "to": null, "rate": 30 }
+    ]
+  },
+  "land_units": [
+    { "name": "Bigha", "to_sqft": 27225 },
+    { "name": "Katha", "to_sqft": 1361.25 },
+    { "name": "Ropani", "to_sqft": 5476.5 }
+  ],
+  "products": [
+    {
+      "hs_code": "7108.12",
+      "description": "Gold (unwrought)",
+      "import_duty_percent": 5,
+      "vat_percent": 15,
+      "advance_tax_percent": 4,
+      "freight_usd_per_kg": 2.50
+    },
+    {
+      "hs_code": "7106.91",
+      "description": "Silver (unwrought)",
+      "import_duty_percent": 3,
+      "vat_percent": 15,
+      "advance_tax_percent": 4,
+      "freight_usd_per_kg": 1.80
+    }
+  ]
+}
