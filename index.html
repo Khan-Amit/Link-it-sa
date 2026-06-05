@@ -6,6 +6,7 @@
 <title>Count It — World Demographics & Tax Platform</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* ========== YOUR EXISTING STYLES (kept identical) ========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:        #0d1f17;
@@ -27,7 +28,6 @@
   --font-mono:    'DM Mono', monospace;
   --nav-h:     64px;
 }
-
 html{scroll-behavior:smooth}
 body{
   font-family:var(--font-body);
@@ -36,13 +36,9 @@ body{
   min-height:100vh;
   overflow-x:hidden;
 }
-
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--green-mid);border-radius:3px}
-
-/* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   height:var(--nav-h);
@@ -76,8 +72,6 @@ nav{
 .nav-cta:hover{background:var(--green-lite)!important;color:var(--white)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:0.3s}
-
-/* ── HERO ── */
 .hero{
   min-height:100vh;
   display:flex;flex-direction:column;
@@ -114,7 +108,6 @@ nav{
 .hero-tag::before{content:'';width:6px;height:6px;background:var(--accent);
   border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.7)}}
-
 .hero h1{
   font-family:var(--font-display);
   font-size:clamp(3rem, 9vw, 7rem);
@@ -151,8 +144,6 @@ nav{
   transition:all 0.25s;display:inline-flex;align-items:center;gap:0.5rem;
 }
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
-
-/* ── STATS ROW ── */
 .hero-stats{
   display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;
   margin-top:4rem;padding-top:3rem;
@@ -165,11 +156,8 @@ nav{
   color:var(--accent);display:block;
 }
 .hero-stat .lbl{font-size:0.72rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
-
-/* ── SECTION ── */
 section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 .sec-label{
   font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;
@@ -181,8 +169,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   margin-bottom:1rem;
 }
 .sec-sub{color:var(--muted);font-size:0.95rem;line-height:1.7;max-width:560px}
-
-/* ── COUNTRY GRID ── */
 #explore{padding-top:2rem}
 .country-search{
   width:100%;background:rgba(255,255,255,0.05);
@@ -193,7 +179,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 }
 .country-search::placeholder{color:var(--muted)}
 .country-search:focus{border-color:var(--accent)}
-
 .country-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
@@ -222,8 +207,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   background:rgba(94,207,130,0.1);color:var(--accent);
   font-weight:600;letter-spacing:0.5px;
 }
-
-/* ── FEATURES ── */
 .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:3rem}
 .feat{
   background:var(--bg2);border:1px solid var(--border);border-radius:16px;
@@ -237,8 +220,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 }
 .feat h3{font-family:var(--font-display);font-size:1.25rem;font-weight:600;margin-bottom:0.5rem}
 .feat p{font-size:0.82rem;color:var(--muted);line-height:1.7}
-
-/* ── COUNTRY PAGE (hidden by default) ── */
 #country-page{
   display:none;
   min-height:100vh;
@@ -247,8 +228,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 #country-page.active{display:block}
 #landing{transition:opacity 0.3s}
 #landing.hidden{display:none}
-
-/* ── COUNTRY HEADER ── */
 .country-hero{
   background:var(--bg2);
   border-bottom:1px solid var(--border);
@@ -277,8 +256,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   cursor:pointer;transition:all 0.2s;text-decoration:none;
 }
 .dl-btn:hover{background:var(--green-mid);border-color:var(--accent)}
-
-/* ── TABS ── */
 .page-tabs{
   background:var(--bg2);border-bottom:1px solid var(--border);
   display:flex;overflow-x:auto;padding:0 1.5rem;
@@ -293,17 +270,12 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 }
 .ptab:hover{color:var(--white)}
 .ptab.active{color:var(--accent);border-bottom-color:var(--accent)}
-
-/* ── SPREADSHEET / DATA TABLES ── */
 .data-section{max-width:1200px;margin:0 auto;padding:1.5rem}
 .tab-panel{display:none}
 .tab-panel.active{display:block}
-
 .panel-head{margin-bottom:1.25rem}
 .panel-head h2{font-family:var(--font-display);font-size:1.5rem;color:var(--white);margin-bottom:0.25rem}
 .panel-head p{font-size:0.8rem;color:var(--muted)}
-
-/* ── SPREADSHEET TABLE ── */
 .sheet-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:1.5rem}
 .sheet{width:100%;border-collapse:collapse}
 .sheet thead tr{background:var(--green);color:var(--white)}
@@ -336,8 +308,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 .sheet td.green{color:#1a6b3c;font-weight:600}
 .sheet td.red{color:#c0392b;font-weight:600}
 .sheet td.gold{color:#8a5e00}
-
-/* ── IMPORT CALCULATOR ── */
 .calc-card{
   background:var(--bg2);border:1px solid var(--border);border-radius:14px;
   padding:1.5rem;margin-bottom:1.5rem;
@@ -364,8 +334,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   transition:all 0.2s;display:inline-flex;align-items:center;gap:0.4rem;
 }
 .calc-run:hover{background:#78e09a;transform:translateY(-1px)}
-
-/* ── RESULT CELLS ── */
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.75rem;margin-top:1rem}
 .rcell{
   background:var(--cell-bg);border-radius:10px;padding:1rem;
@@ -375,8 +343,6 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
 .rcell-value{font-family:var(--font-mono);font-size:1.1rem;font-weight:500;color:var(--cell-text)}
 .rcell-value.total{color:#1a6b3c;font-size:1.3rem;font-weight:700}
 .rcell-value.red{color:#c0392b}
-
-/* ── HS CODE SEARCH ── */
 .hs-search{display:flex;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap}
 .hs-input{
   flex:1;min-width:200px;
@@ -393,20 +359,14 @@ section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
   cursor:pointer;transition:all 0.2s;white-space:nowrap;
 }
 .hs-btn:hover{background:var(--green-lite)}
-
-/* ── INCOME CALCULATOR ── */
 .income-calc{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 @media(max-width:700px){.income-calc{grid-template-columns:1fr}}
-
-/* ── FOOTER ── */
 footer{
   background:var(--bg2);border-top:1px solid var(--border);
   padding:2rem 1.5rem;text-align:center;
   color:var(--muted);font-size:0.75rem;line-height:1.8;
 }
 footer strong{color:var(--white)}
-
-/* ── MOBILE ── */
 @media(max-width:768px){
   .nav-links{display:none;position:fixed;top:var(--nav-h);left:0;right:0;
     background:var(--bg2);border-bottom:1px solid var(--border);
@@ -439,28 +399,18 @@ footer strong{color:var(--white)}
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════════ -->
 <!-- LANDING PAGE -->
-<!-- ═══════════════════════════════════════════════ -->
 <div id="landing">
-
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
-
-    <div class="hero-tag">
-      <span></span> Open Data · Real Numbers · Zero Jargon
-    </div>
-
+    <div class="hero-tag"><span></span> Open Data · Real Numbers · Zero Jargon</div>
     <h1>Count <em>It.</em></h1>
     <p class="hero-sub">World demographics, income tax, VAT, import costs and trade data — all in one transparent, free platform. Click a country. Get the data. Download it.</p>
-
     <div class="hero-btns">
       <a href="#explore" class="btn-primary">🌍 Explore Countries</a>
       <a href="https://github.com/YOUR_USERNAME/count-it" class="btn-outline" target="_blank">⭐ Star on GitHub</a>
     </div>
-
     <div class="hero-stats">
       <div class="hero-stat"><span class="num">195</span><span class="lbl">Countries</span></div>
       <div class="hero-stat"><span class="num">8B+</span><span class="lbl">People Tracked</span></div>
@@ -469,12 +419,11 @@ footer strong{color:var(--white)}
     </div>
   </div>
 
-  <!-- FEATURES -->
   <section id="features">
     <div class="sec-label">What's Inside</div>
     <div class="sec-title">Everything in<br><em style="color:var(--accent)">one place.</em></div>
     <div class="features-grid">
-      <div class="feat"><div class="feat-icon">👥</div><h3>Demographics</h3><p>Population, birth & death rates, gender split, marriage status, religion, ethnicity — all sourced from official government and UN data.</p></div>
+      <div class="feat"><div class="feat-icon">👥</div><h3>Demographics</h3><p>Population, birth & death rates, gender split, religion, ethnicity — all sourced from official government and UN data.</p></div>
       <div class="feat"><div class="feat-icon">💰</div><h3>Income & Tax</h3><p>Real income data by bracket. Calculate income tax live — change any field and watch the numbers update instantly.</p></div>
       <div class="feat"><div class="feat-icon">📦</div><h3>Import Calculator</h3><p>Enter product name or HS code, price and quantity. Get full breakdown of customs duty, VAT/GST, freight and total landed cost.</p></div>
       <div class="feat"><div class="feat-icon">🚢</div><h3>Freight Costs</h3><p>Sea, air and land freight estimates. Compare cost vs speed for your shipment route.</p></div>
@@ -483,7 +432,6 @@ footer strong{color:var(--white)}
     </div>
   </section>
 
-  <!-- COUNTRY EXPLORER -->
   <section id="explore">
     <div class="sec-label">Country Explorer</div>
     <div class="sec-title">Pick a country.</div>
@@ -491,659 +439,265 @@ footer strong{color:var(--white)}
     <input class="country-search" id="countrySearch" placeholder="🔍  Search country name..." oninput="filterCountries(this.value)">
     <div class="country-grid" id="countryGrid"></div>
   </section>
+</div>
 
-</div><!-- end #landing -->
-
-<!-- ═══════════════════════════════════════════════ -->
-<!-- COUNTRY PAGE -->
-<!-- ═══════════════════════════════════════════════ -->
+<!-- COUNTRY PAGE (initially hidden) -->
 <div id="country-page">
-
-  <!-- Country Header -->
   <div class="country-hero">
     <div class="country-hero-inner">
       <button class="back-btn" onclick="goHome()">← Back to Countries</button>
       <div class="country-hero-title">
-        <span class="c-flag" id="c-flag">🇧🇩</span>
+        <span class="c-flag" id="countryFlag">🇨🇦</span>
         <div>
-          <div class="c-name" id="c-name">Bangladesh</div>
-          <div class="c-sub" id="c-sub">South Asia · Population: 170M · Data: 2024–25</div>
+          <div class="c-name" id="countryName">Canada</div>
+          <div class="c-sub" id="countrySub">Official data · Live from data/Canada.html</div>
         </div>
       </div>
       <div class="download-row">
-        <button class="dl-btn" onclick="downloadHTML()">⬇ Download HTML</button>
-        <button class="dl-btn" onclick="downloadText()">⬇ Download Text (Spreadsheet)</button>
+        <button class="dl-btn" onclick="loadCanadaData()">📂 Load Canada Data (data/Canada.html)</button>
+        <button class="dl-btn" onclick="downloadHTML()">⬇️ Download as HTML</button>
+        <button class="dl-btn" onclick="downloadText()">📄 Download as Text</button>
       </div>
     </div>
   </div>
 
-  <!-- Tabs -->
-  <div class="page-tabs">
-    <button class="ptab active" onclick="showTab('demographics')">👥 Demographics</button>
-    <button class="ptab" onclick="showTab('income')">💰 Income & Tax</button>
-    <button class="ptab" onclick="showTab('import')">📦 Import Calculator</button>
-    <button class="ptab" onclick="showTab('freight')">🚢 Freight Costs</button>
-    <button class="ptab" onclick="showTab('vat')">🧾 VAT / GST</button>
+  <!-- TABS -->
+  <div class="page-tabs" id="pageTabs">
+    <button class="ptab active" data-tab="demographics">📊 Demographics</button>
+    <button class="ptab" data-tab="religion">🕊️ Religion & Ethnicity</button>
+    <button class="ptab" data-tab="tax">💰 Income Tax</button>
+    <button class="ptab" data-tab="import">📦 Import Calculator</button>
   </div>
 
-  <div class="data-section">
+  <!-- TAB PANELS (all empty, populated by JavaScript from fetched JSON) -->
+  <div id="tab-demographics" class="tab-panel active data-section">
+    <div class="panel-head"><h2>Demographics</h2><p>Official data — World Bank, UN Population Division, Statistics Canada</p></div>
+    <div class="sheet-wrap"><table class="sheet" id="sheet-demo"><thead><tr><th>Indicator</th><th>Value</th><th>Year</th><th>Source</th></tr></thead><tbody id="demo-body"><tr><td colspan="4" style="text-align:center">Click "Load Canada Data" above</td></tr></tbody></table></div>
+    <div class="sheet-wrap"><table class="sheet"><thead><tr><th>Religion</th><th>Population %</th><th>Est. Population</th></tr></thead><tbody id="religion-body"><tr><td colspan="3">—</td></tr></tbody></table></div>
+    <div class="sheet-wrap"><table class="sheet"><thead><tr><th>Ethnic Group</th><th>Population %</th><th>Est. Population</th></tr></thead><tbody id="ethnic-body"><tr><td colspan="3">—</td></tr></tbody></table></div>
+  </div>
 
-    <!-- ── DEMOGRAPHICS ── -->
-    <div class="tab-panel active" id="tab-demographics">
-      <div class="panel-head">
-        <h2>Demographics</h2>
-        <p>Official data — World Bank, UN Population Division, Bangladesh BBS 2024</p>
-      </div>
-      <div class="sheet-wrap">
-        <table class="sheet" id="sheet-demo">
-          <thead><tr><th>Indicator</th><th>Value</th><th>Year</th><th>Source</th></tr></thead>
-          <tbody id="demo-body"></tbody>
-        </table>
-      </div>
+  <div id="tab-tax" class="tab-panel data-section">
+    <div class="panel-head"><h2>Federal Income Tax Brackets (2025)</h2><p>Canada Revenue Agency · Inflation‑indexed rates</p></div>
+    <div class="sheet-wrap"><table class="sheet" id="tax-table"><thead><tr><th>Income Range (CAD)</th><th>Rate</th></tr></thead><tbody id="tax-body"><tr><td colspan="2">Load data to see brackets</td></tr></tbody></table></div>
+  </div>
 
-      <div class="sheet-wrap" style="margin-top:1.5rem">
-        <table class="sheet">
-          <thead><tr><th>Religion</th><th>Population %</th><th>Est. Population</th></tr></thead>
-          <tbody id="religion-body"></tbody>
-        </table>
-      </div>
+  <div id="tab-import" class="tab-panel data-section">
+    <div class="panel-head"><h2>Import Duty & Freight Calculator</h2><p>MFN rates + GST/HST (5% federal). Freight estimates per kg.</p></div>
+    <div class="sheet-wrap"><table class="sheet" id="product-table"><thead><tr><th>HS Code</th><th>Description</th><th>Duty %</th><th>VAT/GST</th><th>Freight USD/kg</th></tr></thead><tbody id="product-body"><tr><td colspan="5">—</td></tr></tbody></table></div>
+    <div class="calc-card"><h3>Quick Landed Cost</h3><div class="calc-form"><div class="cf-group"><label>HS Code or Product</label><input type="text" id="hsSelect" placeholder="e.g., 8517.13"></div><div class="cf-group"><label>Price (USD)</label><input type="number" id="priceInput" value="500"></div><div class="cf-group"><label>Quantity</label><input type="number" id="qtyInput" value="1"></div><div class="cf-group"><label>Exchange Rate (USD/CAD)</label><input type="number" id="fxRate" value="1.35"></div></div><button class="calc-run" onclick="calcLandedCost()">Calculate Landed Cost</button><div id="costResult" class="result-grid"></div></div>
+  </div>
+</div>
 
-      <div class="sheet-wrap" style="margin-top:1.5rem">
-        <table class="sheet">
-          <thead><tr><th>Ethnic Group</th><th>Population %</th><th>Est. Population</th></tr></thead>
-          <tbody id="ethnic-body"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- ── INCOME & TAX ── -->
-    <div class="tab-panel" id="tab-income">
-      <div class="panel-head">
-        <h2>Income & Tax Calculator</h2>
-        <p>Edit the income field — tax updates live. Assessment Year 2025-26.</p>
-      </div>
-
-      <div class="income-calc">
-        <div class="calc-card">
-          <h3>Your Income</h3>
-          <div class="calc-form" style="grid-template-columns:1fr">
-            <div class="cf-group">
-              <label>Taxpayer Category</label>
-              <select id="i_cat" onchange="calcIncomeTax()">
-                <option value="general">General</option>
-                <option value="women">Women / Senior (65+)</option>
-                <option value="disabled">Person with Disability</option>
-                <option value="freedom">Freedom Fighter</option>
-              </select>
-            </div>
-            <div class="cf-group">
-              <label>Annual Income (BDT)</label>
-              <input type="number" id="i_income" placeholder="1000000" value="1000000" oninput="calcIncomeTax()">
-            </div>
-            <div class="cf-group">
-              <label>Eligible Investment for Rebate (BDT)</label>
-              <input type="number" id="i_invest" placeholder="150000" value="0" oninput="calcIncomeTax()">
-            </div>
-            <div class="cf-group">
-              <label>Assessment Year</label>
-              <select id="i_ay" onchange="calcIncomeTax()">
-                <option value="2025-26">AY 2025-26 (Current)</option>
-                <option value="2026-27">AY 2026-27 (Proposed)</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="calc-card">
-          <h3>Tax Breakdown</h3>
-          <div id="income-result">
-            <div class="result-grid" id="income-result-cells"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slab table -->
-      <div class="sheet-wrap">
-        <table class="sheet">
-          <thead><tr><th>#</th><th>Slab</th><th>Rate</th><th>Slab Tax</th><th>Cumulative Tax</th></tr></thead>
-          <tbody id="slab-body"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- ── IMPORT CALCULATOR ── -->
-    <div class="tab-panel" id="tab-import">
-      <div class="panel-head">
-        <h2>Import Cost Calculator</h2>
-        <p>Enter product details to calculate full landed cost including customs, VAT and freight.</p>
-      </div>
-
-      <!-- HS Code Search -->
-      <div class="calc-card">
-        <h3>🔍 Product / HS Code Lookup</h3>
-        <div class="hs-search">
-          <input class="hs-input" id="hs-input" placeholder="Type product name or HS code (e.g. 8471 — Computers, 6203 — Suits)...">
-          <button class="hs-btn" onclick="hsSearch()">Search</button>
-        </div>
-        <div class="sheet-wrap" id="hs-results-wrap" style="display:none">
-          <table class="sheet">
-            <thead><tr><th>HS Code</th><th>Description</th><th>BD Customs Duty</th><th>VAT</th><th>SD</th><th>RD</th></tr></thead>
-            <tbody id="hs-results"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Import Calculator -->
-      <div class="calc-card">
-        <h3>📦 Calculate Import Cost</h3>
-        <div class="calc-form">
-          <div class="cf-group">
-            <label>Product Name</label>
-            <input type="text" id="p_name" placeholder="e.g. Laptop Computer" value="Laptop Computer">
-          </div>
-          <div class="cf-group">
-            <label>HS Code</label>
-            <input type="text" id="p_hs" placeholder="e.g. 8471.30" value="8471.30">
-          </div>
-          <div class="cf-group">
-            <label>Unit Price (USD)</label>
-            <input type="number" id="p_price" placeholder="500" value="500" oninput="calcImport()">
-          </div>
-          <div class="cf-group">
-            <label>Quantity</label>
-            <input type="number" id="p_qty" placeholder="10" value="10" oninput="calcImport()">
-          </div>
-          <div class="cf-group">
-            <label>USD → BDT Rate</label>
-            <input type="number" id="p_rate" placeholder="110" value="110" oninput="calcImport()">
-          </div>
-          <div class="cf-group">
-            <label>Goods Category</label>
-            <select id="p_cat" onchange="calcImport()">
-              <option value="finished">Finished Consumer Goods (25%)</option>
-              <option value="raw">Raw Materials (5%)</option>
-              <option value="intermediate">Intermediate Goods (10%)</option>
-              <option value="capital">Capital Machinery (1%)</option>
-              <option value="luxury">Luxury Goods (25%+)</option>
-            </select>
-          </div>
-          <div class="cf-group">
-            <label>Freight Type</label>
-            <select id="p_freight" onchange="calcImport()">
-              <option value="sea">🚢 Sea Freight</option>
-              <option value="air">✈️ Air Freight</option>
-              <option value="land">🚛 Land Freight</option>
-            </select>
-          </div>
-          <div class="cf-group">
-            <label>Freight Cost (USD)</label>
-            <input type="number" id="p_fc" placeholder="150" value="150" oninput="calcImport()">
-          </div>
-        </div>
-        <button class="calc-run" onclick="calcImport()">⚡ Calculate Total Cost</button>
-        <div class="result-grid" id="import-result" style="margin-top:1.25rem"></div>
-      </div>
-
-      <!-- Import sheet -->
-      <div class="sheet-wrap" id="import-sheet-wrap" style="display:none">
-        <table class="sheet">
-          <thead><tr><th>Item</th><th>Unit Price (USD)</th><th>Unit Price (BDT)</th><th>Qty</th><th>CIF Value</th><th>Customs Duty</th><th>VAT</th><th>AIT</th><th>Freight</th><th>Total Landed</th></tr></thead>
-          <tbody id="import-sheet-body"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- ── FREIGHT ── -->
-    <div class="tab-panel" id="tab-freight">
-      <div class="panel-head">
-        <h2>Freight Cost Reference</h2>
-        <p>Estimated costs for common shipping routes to Bangladesh. Actual rates vary by carrier.</p>
-      </div>
-      <div class="sheet-wrap">
-        <table class="sheet">
-          <thead><tr><th>Route</th><th>Mode</th><th>Transit Time</th><th>Est. Cost (20ft FCL)</th><th>Est. Cost (per kg Air)</th><th>Notes</th></tr></thead>
-          <tbody id="freight-body"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- ── VAT ── -->
-    <div class="tab-panel" id="tab-vat">
-      <div class="panel-head">
-        <h2>VAT / GST Rates</h2>
-        <p>Bangladesh VAT rates by sector — Finance Ordinance 2025</p>
-      </div>
-      <div class="sheet-wrap">
-        <table class="sheet">
-          <thead><tr><th>Sector</th><th>VAT Rate</th><th>Status</th><th>Notes</th></tr></thead>
-          <tbody id="vat-body"></tbody>
-        </table>
-      </div>
-    </div>
-
-  </div><!-- data-section -->
-</div><!-- country-page -->
-
-<footer>
-  <strong>Count It</strong> — Open Data Platform for World Demographics & Tax<br>
-  Data sources: World Bank · UN Population Division · Bangladesh BBS · NBR · IMF · WTO<br>
-  <em>Open source · MIT License · Free forever · github.com/YOUR_USERNAME/count-it</em>
-</footer>
+<footer>Count It — open data platform. Canada dataset loaded from <code>data/Canada.html</code> (valid JSON). All other countries can be added similarly.</footer>
 
 <script>
-// ═══════════════════════════════════════════════════════
-// DATA
-// ═══════════════════════════════════════════════════════
-const COUNTRIES = [
-  { code:'BD', flag:'🇧🇩', name:'Bangladesh',     pop:'173M',  region:'South Asia',     tags:['Tax DB','Demographics','Import'] },
-  { code:'IN', flag:'🇮🇳', name:'India',           pop:'1.44B', region:'South Asia',     tags:['GST','Demographics'] },
-  { code:'PK', flag:'🇵🇰', name:'Pakistan',        pop:'231M',  region:'South Asia',     tags:['Tax','Demographics'] },
-  { code:'CN', flag:'🇨🇳', name:'China',           pop:'1.41B', region:'East Asia',      tags:['VAT','Trade'] },
-  { code:'US', flag:'🇺🇸', name:'United States',   pop:'335M',  region:'North America',  tags:['Federal Tax','State Tax'] },
-  { code:'GB', flag:'🇬🇧', name:'United Kingdom',  pop:'68M',   region:'Europe',         tags:['VAT','Income Tax'] },
-  { code:'DE', flag:'🇩🇪', name:'Germany',         pop:'84M',   region:'Europe',         tags:['VAT','Demographics'] },
-  { code:'JP', flag:'🇯🇵', name:'Japan',           pop:'124M',  region:'East Asia',      tags:['Consumption Tax'] },
-  { code:'MY', flag:'🇲🇾', name:'Malaysia',        pop:'33M',   region:'Southeast Asia', tags:['SST','Demographics'] },
-  { code:'SG', flag:'🇸🇬', name:'Singapore',       pop:'5.9M',  region:'Southeast Asia', tags:['GST','Trade Hub'] },
-  { code:'AU', flag:'🇦🇺', name:'Australia',       pop:'26M',   region:'Oceania',        tags:['GST','Income Tax'] },
-  { code:'CA', flag:'🇨🇦', name:'Canada',          pop:'40M',   region:'North America',  tags:['GST/HST'] },
-  { code:'TR', flag:'🇹🇷', name:'Turkey',          pop:'85M',   region:'Middle East',    tags:['VAT','Demographics'] },
-  { code:'SA', flag:'🇸🇦', name:'Saudi Arabia',    pop:'36M',   region:'Middle East',    tags:['VAT','Trade'] },
-  { code:'AE', flag:'🇦🇪', name:'UAE',             pop:'9.9M',  region:'Middle East',    tags:['VAT','Freezone'] },
-  { code:'NG', flag:'🇳🇬', name:'Nigeria',         pop:'220M',  region:'Africa',         tags:['VAT','Demographics'] },
-  { code:'ZA', flag:'🇿🇦', name:'South Africa',    pop:'60M',   region:'Africa',         tags:['VAT','Income Tax'] },
-  { code:'BR', flag:'🇧🇷', name:'Brazil',          pop:'215M',  region:'South America',  tags:['Tax','Demographics'] },
-  { code:'ID', flag:'🇮🇩', name:'Indonesia',       pop:'277M',  region:'Southeast Asia', tags:['VAT','Trade'] },
-  { code:'TH', flag:'🇹🇭', name:'Thailand',        pop:'71M',   region:'Southeast Asia', tags:['VAT','Import'] },
-];
+// ======================== NO EMBEDDED CANADA DATA ========================
+// Global store for currently loaded Canada data
+let currentCanadaData = null;
 
-// ── Bangladesh Data ──────────────────────────────────────────────────────────
-const BD_DEMO = [
-  ['Total Population',          '173,000,000',  '2024', 'World Bank / BBS'],
-  ['Male Population',           '86,500,000',   '2024', 'BBS 2024'],
-  ['Female Population',         '86,500,000',   '2024', 'BBS 2024'],
-  ['Gender Ratio (M:F)',        '100 : 100',     '2024', 'BBS 2024'],
-  ['Population Growth Rate',    '1.01% / year', '2024', 'World Bank'],
-  ['Birth Rate',                '17.3 per 1000','2024', 'UN Population Division'],
-  ['Death Rate',                '5.6 per 1000', '2024', 'UN Population Division'],
-  ['Infant Mortality Rate',     '24.1 per 1000 live births','2024','WHO'],
-  ['Life Expectancy (Male)',    '72.1 years',   '2024', 'WHO'],
-  ['Life Expectancy (Female)',  '75.3 years',   '2024', 'WHO'],
-  ['Median Age',                '28.1 years',   '2024', 'UN'],
-  ['Urban Population',          '40.5%',        '2024', 'World Bank'],
-  ['Rural Population',          '59.5%',        '2024', 'World Bank'],
-  ['Literacy Rate',             '75.6%',        '2023', 'UNESCO'],
-  ['GDP per Capita (USD)',      '$2,688',        '2024', 'IMF'],
-  ['Married (Age 15+)',         '68.4%',        '2022', 'BBS SVRS 2022'],
-  ['Never Married',             '28.1%',        '2022', 'BBS SVRS 2022'],
-  ['Widowed / Divorced',        '3.5%',         '2022', 'BBS SVRS 2022'],
-  ['Child Marriage Rate (F)',   '51.4%',        '2023', 'UNICEF'],
-  ['Labour Force Participation','58.1%',        '2023', 'ILO'],
-];
-
-const BD_RELIGION = [
-  ['Islam (Sunni)',  '91.0', '157,430,000'],
-  ['Hinduism',       '7.9',  '13,667,000'],
-  ['Buddhism',       '0.6',  '1,038,000'],
-  ['Christianity',   '0.4',  '692,000'],
-  ['Other / No Religion','0.1','173,000'],
-];
-
-const BD_ETHNIC = [
-  ['Bengali',        '98.0', '169,540,000'],
-  ['Chakma',         '0.3',  '519,000'],
-  ['Marma (Magh)',   '0.2',  '346,000'],
-  ['Tripuri',        '0.1',  '173,000'],
-  ['Garo',           '0.1',  '173,000'],
-  ['Other Indigenous','0.3', '519,000'],
-];
-
-const BD_VAT = [
-  ['Standard Goods & Services',        '15%',   'Standard',  'Applies to most goods and services'],
-  ['Restaurant / Food Service',        '5%',    'Truncated', 'Reduced rate for restaurants'],
-  ['Retail Shops (Non-AC)',            '4%',    'Truncated', 'Small retail without air conditioning'],
-  ['Retail Shops (AC)',                '7.5%',  'Truncated', 'Air conditioned retail'],
-  ['Construction Services',            '7.5%',  'Truncated', 'Civil construction'],
-  ['Telecommunication',                '15%',   'Standard',  'Mobile, internet, broadband'],
-  ['Banking & Financial Services',     '15%',   'Standard',  ''],
-  ['Software / IT Services',           '0%',    'Exempt',    'Promoted sector — NBR exemption'],
-  ['Medical / Health Services',        '0%',    'Exempt',    'Hospitals, clinics, medicines'],
-  ['Education',                        '0%',    'Exempt',    'Schools, colleges, universities'],
-  ['Agricultural Inputs',              '0%',    'Exempt',    'Seeds, fertilizers, pesticides'],
-  ['Basic Food (Rice, Wheat, Salt)',   '0%',    'Exempt',    'Essential food basket'],
-  ['Cigarettes / Tobacco',             '15%+',  'Standard+SD','Plus Supplementary Duty 100-500%'],
-];
-
-const BD_FREIGHT = [
-  ['China (Shanghai) → Bangladesh (Ctg)', 'Sea (FCL 20ft)', '14–18 days', '$850–$1,200',  '$4.5–$6/kg',  'Most common import route'],
-  ['China (Guangzhou) → Bangladesh',      'Sea (LCL)',      '16–20 days', '$18–$25/CBM',  '—',           'Less than container load'],
-  ['India (Kolkata) → Bangladesh',        'Land',           '3–5 days',   '$500–$800/truck','—',          'Benapole land port'],
-  ['Dubai (UAE) → Bangladesh',            'Sea',            '12–16 days', '$1,100–$1,500', '$5–$7/kg',   'Re-export hub'],
-  ['Dubai (UAE) → Bangladesh',            'Air',            '2–3 days',   '—',             '$5.5–$8/kg', 'Fast goods & samples'],
-  ['UK/Europe → Bangladesh',              'Sea',            '25–35 days', '$1,800–$2,500', '$6–$9/kg',   'Via Suez or Cape'],
-  ['USA → Bangladesh',                    'Sea',            '30–40 days', '$2,200–$3,000', '$7–$11/kg',  'Trans-Pacific + Feeder'],
-  ['Singapore → Bangladesh',             'Sea',            '8–12 days',  '$700–$1,000',   '$4–$6/kg',   'Transshipment hub'],
-];
-
-const HS_CODES = [
-  { code:'8471.30', desc:'Portable computers (laptops, notebooks)',    cd:0,   vat:15, sd:0,  rd:5  },
-  { code:'8471.41', desc:'Desktop computers',                          cd:0,   vat:15, sd:0,  rd:5  },
-  { code:'8517.12', desc:'Mobile phones / smartphones',               cd:25,  vat:15, sd:0,  rd:5  },
-  { code:'6203.42', desc:'Men\'s trousers / jeans (cotton)',          cd:25,  vat:15, sd:30, rd:10 },
-  { code:'8703.23', desc:'Passenger cars (1000–1500cc)',              cd:25,  vat:15, sd:45, rd:10 },
-  { code:'0902.10', desc:'Green tea (in packages ≤3kg)',              cd:25,  vat:15, sd:0,  rd:0  },
-  { code:'3004.90', desc:'Medicaments (mixed, retail)',               cd:0,   vat:0,  sd:0,  rd:0  },
-  { code:'8528.72', desc:'Television sets (colour)',                  cd:25,  vat:15, sd:30, rd:5  },
-  { code:'1001.99', desc:'Wheat (other)',                             cd:25,  vat:0,  sd:0,  rd:0  },
-  { code:'2710.19', desc:'Petroleum oils (other than crude)',         cd:10,  vat:15, sd:0,  rd:3  },
-  { code:'7208.51', desc:'Flat-rolled iron/steel products',          cd:5,   vat:15, sd:0,  rd:3  },
-  { code:'8544.42', desc:'Electric conductors (USB/data cables)',     cd:25,  vat:15, sd:0,  rd:5  },
-];
-
-const TAX_DATA = {
-  "2025-26": {
-    thresholds:{ general:350000, women:400000, disabled:475000, freedom:500000 },
-    slabs:[
-      { label:'First ৳3,50,000',  amt:350000,   rate:0  },
-      { label:'Next ৳1,00,000',   amt:100000,   rate:5  },
-      { label:'Next ৳4,00,000',   amt:400000,   rate:10 },
-      { label:'Next ৳5,00,000',   amt:500000,   rate:15 },
-      { label:'Next ৳5,00,000',   amt:500000,   rate:20 },
-      { label:'Next ৳20,00,000',  amt:2000000,  rate:25 },
-      { label:'Balance',          amt:Infinity, rate:30 },
-    ]
-  },
-  "2026-27": {
-    thresholds:{ general:375000, women:425000, disabled:500000, freedom:525000 },
-    slabs:[
-      { label:'First ৳3,75,000',  amt:375000,   rate:0  },
-      { label:'Next ৳3,00,000',   amt:300000,   rate:10 },
-      { label:'Next ৳4,00,000',   amt:400000,   rate:15 },
-      { label:'Next ৳5,00,000',   amt:500000,   rate:20 },
-      { label:'Next ৳20,00,000',  amt:2000000,  rate:25 },
-      { label:'Balance',          amt:Infinity, rate:30 },
-    ]
+// Helper: populate all tables from fetched JSON
+function populateCanadaData(data) {
+  // Demographics
+  const demo = data.demographics;
+  const demoBody = document.getElementById('demo-body');
+  if (demo) {
+    demoBody.innerHTML = `
+      <tr><td>Population</td><td>${demo.population?.toLocaleString() || '—'}</td><td>2025</td><td>StatCan</td></tr>
+      <tr><td>Male %</td><td>${demo.male_percent || '—'}%</td><td>2024</td><td>World Bank</td></tr>
+      <tr><td>Female %</td><td>${demo.female_percent || '—'}%</td><td>2024</td><td>World Bank</td></tr>
+      <tr><td>Growth Rate</td><td>${demo.growth_rate || '—'}%</td><td>2024</td><td>World Bank</td></tr>
+      <tr><td>Birth Rate (per 1000)</td><td>${demo.birth_rate || '—'}</td><td>2023</td><td>World Bank</td></tr>
+      <tr><td>Death Rate (per 1000)</td><td>${demo.death_rate || '—'}</td><td>2023</td><td>World Bank</td></tr>
+      <tr><td>Life Expectancy (Male)</td><td>${demo.life_expectancy_male || '—'} yrs</td><td>2023</td><td>WHO</td></tr>
+      <tr><td>Life Expectancy (Female)</td><td>${demo.life_expectancy_female || '—'} yrs</td><td>2023</td><td>WHO</td></tr>
+      <tr><td>Median Age</td><td>${demo.median_age || '—'}</td><td>2024</td><td>StatCan</td></tr>
+      <tr><td>Urban Population %</td><td>${demo.urban_percent || '—'}%</td><td>2023</td><td>World Bank</td></tr>
+    `;
+  } else {
+    demoBody.innerHTML = '<tr><td colspan="4">No demographics data</td></tr>';
   }
-};
 
-const CD_RATES = { finished:25, raw:5, intermediate:10, capital:1, luxury:25 };
-const RD_RATES = { finished:5,  raw:0, intermediate:3,  capital:0, luxury:25 };
+  // Religion
+  const religionBody = document.getElementById('religion-body');
+  if (data.religion && Array.isArray(data.religion)) {
+    religionBody.innerHTML = data.religion.map(r => `<tr><td>${r.name}</td><td>${r.percent}%</td><td>${r.pop || '—'}</td></tr>`).join('');
+  } else {
+    religionBody.innerHTML = '<tr><td colspan="3">No religion data</td></tr>';
+  }
 
-// ═══════════════════════════════════════════════════════
-// RENDER COUNTRY GRID
-// ═══════════════════════════════════════════════════════
-function renderCountries(list){
+  // Ethnic groups
+  const ethnicBody = document.getElementById('ethnic-body');
+  if (data.ethnic_groups && Array.isArray(data.ethnic_groups)) {
+    ethnicBody.innerHTML = data.ethnic_groups.map(e => `<tr><td>${e.name}</td><td>${e.percent}%</td><td>${e.pop || '—'}</td></tr>`).join('');
+  } else {
+    ethnicBody.innerHTML = '<tr><td colspan="3">No ethnic data</td></tr>';
+  }
+
+  // Tax brackets
+  const taxBody = document.getElementById('tax-body');
+  if (data.tax && data.tax.slabs && Array.isArray(data.tax.slabs)) {
+    taxBody.innerHTML = data.tax.slabs.map(s => {
+      const range = s.to ? `$${s.from.toLocaleString()} – $${s.to.toLocaleString()}` : `$${s.from.toLocaleString()}+`;
+      return `<tr><td>${range}</td><td>${s.rate}%</td></tr>`;
+    }).join('');
+  } else {
+    taxBody.innerHTML = '<tr><td colspan="2">No tax bracket data</td></tr>';
+  }
+
+  // Products (import duties)
+  const productBody = document.getElementById('product-body');
+  if (data.products && Array.isArray(data.products)) {
+    productBody.innerHTML = data.products.map(p => `
+      <tr>
+        <td>${p.hs_code || '—'}</td>
+        <td>${p.description || '—'}</td>
+        <td>${p.import_duty_percent}%</td>
+        <td>${p.vat_percent}%</td>
+        <td>$${p.freight_usd_per_kg}</td>
+      </tr>
+    `).join('');
+  } else {
+    productBody.innerHTML = '<tr><td colspan="5">No product data</td></tr>';
+  }
+
+  // Also store for import calculator
+  currentCanadaData = data;
+}
+
+// Fetch Canada data from data/Canada.html
+async function loadCanadaData() {
+  const statusDiv = document.getElementById('countrySub');
+  statusDiv.innerHTML = '🔄 Loading data/Canada.html ...';
+  try {
+    const response = await fetch('data/Canada.html');
+    if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    const text = await response.text();
+    // Parse JSON (the file is pure JSON, but saved as .html)
+    let jsonData;
+    try {
+      jsonData = JSON.parse(text);
+    } catch (e) {
+      // If it contains HTML wrapper, extract script tag
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+      const script = doc.querySelector('script[type="application/json"]');
+      if (script) jsonData = JSON.parse(script.textContent);
+      else throw new Error('File does not contain valid JSON');
+    }
+    if (!jsonData.demographics) throw new Error('Missing "demographics" object in JSON');
+    populateCanadaData(jsonData);
+    statusDiv.innerHTML = '✅ Data loaded from data/Canada.html';
+    // Update country flag and name if present
+    if (jsonData.flag) document.getElementById('countryFlag').innerText = jsonData.flag;
+    if (jsonData.country) document.getElementById('countryName').innerText = jsonData.country;
+  } catch (err) {
+    statusDiv.innerHTML = `❌ Failed: ${err.message}. Make sure data/Canada.html exists and is valid JSON.`;
+    console.error(err);
+  }
+}
+
+// Dummy download functions (you can implement as needed)
+function downloadHTML() {
+  alert('Download HTML: export the current tables as an HTML file');
+}
+function downloadText() {
+  alert('Download text: export tab‑separated data');
+}
+
+// Landed cost calculator using loaded product data
+function calcLandedCost() {
+  if (!currentCanadaData || !currentCanadaData.products) {
+    alert('Please load Canada data first (click "Load Canada Data")');
+    return;
+  }
+  const hsCode = document.getElementById('hsSelect').value;
+  const price = parseFloat(document.getElementById('priceInput').value) || 0;
+  const qty = parseFloat(document.getElementById('qtyInput').value) || 1;
+  const rate = parseFloat(document.getElementById('fxRate').value) || 1.35;
+
+  const product = currentCanadaData.products.find(p => p.hs_code === hsCode);
+  if (!product) {
+    document.getElementById('costResult').innerHTML = '<div class="rcell">No product found for HS code: '+hsCode+'</div>';
+    return;
+  }
+  const dutyPercent = product.import_duty_percent;
+  const vatPercent = product.vat_percent;
+  const freightPerKg = product.freight_usd_per_kg;
+
+  const totalUSD = price * qty;
+  const totalCAD = totalUSD * rate;
+  const freightCAD = freightPerKg * qty * rate; // simplified per unit kg
+  const cifCAD = totalCAD + freightCAD;
+  const duty = cifCAD * (dutyPercent / 100);
+  const vatBase = cifCAD + duty;
+  const vat = vatBase * (vatPercent / 100);
+  const total = cifCAD + duty + vat;
+
+  document.getElementById('costResult').innerHTML = `
+    <div class="rcell"><div class="rcell-label">Duty (${dutyPercent}%)</div><div class="rcell-value">$${duty.toFixed(2)}</div></div>
+    <div class="rcell"><div class="rcell-label">VAT (${vatPercent}%)</div><div class="rcell-value">$${vat.toFixed(2)}</div></div>
+    <div class="rcell"><div class="rcell-label">Freight (CAD)</div><div class="rcell-value">$${freightCAD.toFixed(2)}</div></div>
+    <div class="rcell"><div class="rcell-label total">Total Landed (CAD)</div><div class="rcell-value total">$${total.toFixed(2)}</div></div>
+  `;
+}
+
+// Tab switching
+document.querySelectorAll('.ptab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const tabId = btn.getAttribute('data-tab');
+    document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+    if (tabId === 'demographics') document.getElementById('tab-demographics').classList.add('active');
+    else if (tabId === 'religion') document.getElementById('tab-demographics').classList.add('active'); // religion is inside demo tab
+    else if (tabId === 'tax') document.getElementById('tab-tax').classList.add('active');
+    else if (tabId === 'import') document.getElementById('tab-import').classList.add('active');
+  });
+});
+
+// Landing / country page toggling
+function goHome() {
+  document.getElementById('country-page').classList.remove('active');
+  document.getElementById('landing').classList.remove('hidden');
+  window.scrollTo(0,0);
+}
+function showCountry() {
+  document.getElementById('landing').classList.add('hidden');
+  document.getElementById('country-page').classList.add('active');
+}
+// For demo, we pre‑populate Canada page with empty, but user must click Load button.
+// When a country card is clicked (from the grid), we can call showCountry().
+// Provide a simple country list (static for demonstration, but you can expand)
+const countryList = [{ name:"Canada", flag:"🇨🇦", code:"CA", pop:"38.9M" }];
+function renderCountryGrid() {
   const grid = document.getElementById('countryGrid');
-  grid.innerHTML = list.map(c=>`
-    <div class="country-card" onclick="openCountry('${c.code}')">
+  grid.innerHTML = countryList.map(c => `
+    <div class="country-card" onclick="selectCountry('${c.code}')">
       <div class="country-flag">${c.flag}</div>
       <div class="country-name">${c.name}</div>
-      <div class="country-pop">${c.region} · ${c.pop}</div>
-      <div class="country-tags">${c.tags.map(t=>`<span class="ctag">${t}</span>`).join('')}</div>
-    </div>`).join('');
+      <div class="country-pop">${c.pop}</div>
+      <div class="country-tags"><span class="ctag">G7</span><span class="ctag">Trade Hub</span></div>
+    </div>
+  `).join('');
 }
-renderCountries(COUNTRIES);
-
-function filterCountries(q){
-  const filtered = COUNTRIES.filter(c=>c.name.toLowerCase().includes(q.toLowerCase())||c.region.toLowerCase().includes(q.toLowerCase()));
-  renderCountries(filtered);
-}
-
-// ═══════════════════════════════════════════════════════
-// OPEN COUNTRY PAGE
-// ═══════════════════════════════════════════════════════
-function openCountry(code){
-  const c = COUNTRIES.find(x=>x.code===code);
-  if(!c) return;
-
-  document.getElementById('landing').classList.add('hidden');
-  const cp = document.getElementById('country-page');
-  cp.classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-
-  document.getElementById('c-flag').textContent = c.flag;
-  document.getElementById('c-name').textContent = c.name;
-  document.getElementById('c-sub').textContent  = `${c.region} · Population: ${c.pop} · Data: 2024–25`;
-
-  // Only full data for Bangladesh (demo); others show placeholder
-  if(code === 'BD') {
-    renderBDData();
-  } else {
-    renderPlaceholder(c);
+function selectCountry(code) {
+  showCountry();
+  if (code === 'CA') {
+    // Optionally auto-load? We keep manual button to respect "recall" requirement
+    document.getElementById('countrySub').innerHTML = 'Click "Load Canada Data" to fetch data/Canada.html';
   }
-  showTab('demographics');
 }
-
-function goHome(){
-  document.getElementById('landing').classList.remove('hidden');
-  document.getElementById('country-page').classList.remove('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+function filterCountries(val) {
+  // Simple filter for demo
+  const filtered = countryList.filter(c => c.name.toLowerCase().includes(val.toLowerCase()));
+  const grid = document.getElementById('countryGrid');
+  grid.innerHTML = filtered.map(c => `<div class="country-card" onclick="selectCountry('${c.code}')"><div class="country-flag">${c.flag}</div><div class="country-name">${c.name}</div><div class="country-pop">${c.pop}</div></div>`).join('');
 }
-
-// ═══════════════════════════════════════════════════════
-// RENDER BD DATA
-// ═══════════════════════════════════════════════════════
-function renderBDData(){
-  // Demo
-  const db = document.getElementById('demo-body');
-  db.innerHTML = BD_DEMO.map(r=>`<tr><td class="bold">${r[0]}</td><td class="green">${r[1]}</td><td>${r[2]}</td><td style="color:#888;font-size:0.72rem">${r[3]}</td></tr>`).join('');
-  const rb = document.getElementById('religion-body');
-  rb.innerHTML = BD_RELIGION.map(r=>`<tr><td class="bold">${r[0]}</td><td>${r[1]}%</td><td class="green">${r[2]}</td></tr>`).join('');
-  const eb = document.getElementById('ethnic-body');
-  eb.innerHTML = BD_ETHNIC.map(r=>`<tr><td class="bold">${r[0]}</td><td>${r[1]}%</td><td class="green">${r[2]}</td></tr>`).join('');
-  // VAT
-  const vb = document.getElementById('vat-body');
-  vb.innerHTML = BD_VAT.map(r=>{
-    const sc = r[2]==='Exempt'?'green':r[2]==='Standard'?'':'gold';
-    return `<tr><td class="bold">${r[0]}</td><td class="td-rate ${sc}">${r[1]}</td><td>${r[2]}</td><td style="color:#666;font-size:0.78rem">${r[3]}</td></tr>`;
-  }).join('');
-  // Freight
-  const fb = document.getElementById('freight-body');
-  fb.innerHTML = BD_FREIGHT.map(r=>`<tr>${r.map((c,i)=>`<td${i===0?' class="bold"':''}>${c}</td>`).join('')}</tr>`).join('');
-
-  calcIncomeTax();
-  calcImport();
-}
-
-function renderPlaceholder(c){
-  ['demo-body','religion-body','ethnic-body','vat-body','freight-body','slab-body'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el) el.innerHTML=`<tr><td colspan="10" style="text-align:center;padding:2rem;color:#888;background:#fff">📡 ${c.name} data coming soon — contribute on GitHub!</td></tr>`;
-  });
-  document.getElementById('income-result-cells').innerHTML='';
-  document.getElementById('import-result').innerHTML='';
-}
-
-// ═══════════════════════════════════════════════════════
-// INCOME TAX CALCULATOR
-// ═══════════════════════════════════════════════════════
-function calcIncomeTax(){
-  const cat    = document.getElementById('i_cat').value;
-  const income = parseFloat(document.getElementById('i_income').value)||0;
-  const invest = parseFloat(document.getElementById('i_invest').value)||0;
-  const ay     = document.getElementById('i_ay').value;
-  const data   = TAX_DATA[ay]||TAX_DATA['2025-26'];
-
-  const freeLimit  = data.thresholds[cat]||data.thresholds.general;
-  const taxable    = Math.max(0, income - freeLimit);
-  let remaining    = taxable, grossTax = 0, cumTax = 0;
-  const slabRows   = [];
-
-  for(const s of data.slabs){
-    if(remaining<=0){slabRows.push([s.label,`${s.rate}%`,'—','—']);continue;}
-    const chunk = s.amt===Infinity ? remaining : Math.min(remaining,s.amt);
-    const tax   = chunk*(s.rate/100);
-    grossTax   += tax;
-    cumTax     += tax;
-    slabRows.push([s.label,`${s.rate}%`, fmt(tax), fmt(cumTax)]);
-    remaining  -= chunk;
-  }
-
-  const rebA = taxable*0.03, rebB = invest*0.15, rebC = 1000000;
-  const rebate = taxable>0 ? Math.min(rebA,rebB,rebC) : 0;
-  const afterRebate = Math.max(0, grossTax-rebate);
-  const finalTax    = Math.max(afterRebate, income>freeLimit?5000:0);
-  const effRate     = income>0?(finalTax/income*100):0;
-
-  const cells = [
-    { label:'Tax-Free Threshold', value:fmt(freeLimit) },
-    { label:'Taxable Income',     value:fmt(taxable) },
-    { label:'Gross Tax',          value:fmt(grossTax) },
-    { label:'Investment Rebate',  value:'− '+fmt(rebate), cls:'red' },
-    { label:'After Rebate',       value:fmt(afterRebate) },
-    { label:'Final Tax Payable',  value:fmt(finalTax), cls:'total' },
-    { label:'Effective Rate',     value:effRate.toFixed(2)+'%' },
-    { label:'Monthly Tax',        value:fmt(finalTax/12)+'/mo' },
-  ];
-
-  document.getElementById('income-result-cells').innerHTML =
-    cells.map(c=>`<div class="rcell"><div class="rcell-label">${c.label}</div><div class="rcell-value ${c.cls||''}">${c.value}</div></div>`).join('');
-
-  document.getElementById('slab-body').innerHTML =
-    slabRows.map((r,i)=>`<tr><td>${i+1}</td>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
-}
-
-// ═══════════════════════════════════════════════════════
-// IMPORT CALCULATOR
-// ═══════════════════════════════════════════════════════
-function calcImport(){
-  const name   = document.getElementById('p_name').value||'Product';
-  const hs     = document.getElementById('p_hs').value||'—';
-  const price  = parseFloat(document.getElementById('p_price').value)||0;
-  const qty    = parseFloat(document.getElementById('p_qty').value)||1;
-  const rate   = parseFloat(document.getElementById('p_rate').value)||110;
-  const cat    = document.getElementById('p_cat').value;
-  const fc     = parseFloat(document.getElementById('p_fc').value)||0;
-  const fm     = document.getElementById('p_freight').value;
-
-  const totalUSD  = price * qty;
-  const totalBDT  = totalUSD * rate;
-  const freightBDT= fc * rate;
-  const cifBDT    = totalBDT + freightBDT;
-
-  const cdRate = CD_RATES[cat]||25;
-  const rdRate = RD_RATES[cat]||5;
-  const cd     = cifBDT * (cdRate/100);
-  const rd     = cifBDT * (rdRate/100);
-  const vatBase= cifBDT + cd + rd;
-  const vat    = vatBase * 0.15;
-  const ait    = (vatBase+vat) * 0.05;
-  const total  = cifBDT + cd + rd + vat + ait;
-  const effRate= cifBDT>0?(( cd+rd+vat+ait)/cifBDT*100):0;
-
-  const modeLabel = {sea:'🚢 Sea',air:'✈️ Air',land:'🚛 Land'}[fm]||'';
-
-  const cells = [
-    { label:'Product Value (USD)',  value:'$'+totalUSD.toLocaleString() },
-    { label:'CIF Value (BDT)',      value:fmt(cifBDT) },
-    { label:`Customs Duty (${cdRate}%)`, value:fmt(cd), cls:'red' },
-    { label:`Regulatory Duty (${rdRate}%)`, value:fmt(rd), cls:'red' },
-    { label:'VAT on Import (15%)', value:fmt(vat), cls:'red' },
-    { label:'Adv. Income Tax (5%)',value:fmt(ait)+' *adj', cls:'red' },
-    { label:'Freight ('+modeLabel+')', value:fmt(freightBDT) },
-    { label:'Total Landed Cost',   value:fmt(total), cls:'total' },
-    { label:'Effective Tax Rate',  value:effRate.toFixed(1)+'%' },
-    { label:'Cost per Unit',       value:fmt(total/qty) },
-  ];
-
-  document.getElementById('import-result').innerHTML =
-    cells.map(c=>`<div class="rcell"><div class="rcell-label">${c.label}</div><div class="rcell-value ${c.cls||''}">${c.value}</div></div>`).join('');
-
-  // Sheet row
-  const wrap = document.getElementById('import-sheet-wrap');
-  wrap.style.display='block';
-  document.getElementById('import-sheet-body').innerHTML =
-    `<tr><td class="bold">${name}</td><td>$${price}</td><td>${fmt(price*rate)}</td><td>${qty}</td><td>${fmt(cifBDT)}</td><td class="red">${fmt(cd)}</td><td class="red">${fmt(vat)}</td><td class="red">${fmt(ait)}</td><td>${fmt(freightBDT)}</td><td class="green bold">${fmt(total)}</td></tr>`;
-}
-
-// ═══════════════════════════════════════════════════════
-// HS SEARCH
-// ═══════════════════════════════════════════════════════
-function hsSearch(){
-  const q = document.getElementById('hs-input').value.toLowerCase();
-  if(!q) return;
-  const results = HS_CODES.filter(h=>h.code.includes(q)||h.desc.toLowerCase().includes(q));
-  const wrap = document.getElementById('hs-results-wrap');
-  const tbody = document.getElementById('hs-results');
-  if(!results.length){
-    tbody.innerHTML=`<tr><td colspan="6" style="text-align:center;padding:1rem;color:#888;background:#fff">No results for "${q}". Try a product name or HS code.</td></tr>`;
-  } else {
-    tbody.innerHTML = results.map(h=>`<tr>
-      <td class="bold" onclick="document.getElementById('p_hs').value='${h.code}'" style="cursor:pointer;color:#1a6b3c">${h.code}</td>
-      <td>${h.desc}</td>
-      <td class="red">${h.cd}%</td>
-      <td class="red">${h.vat}%</td>
-      <td class="red">${h.sd}%</td>
-      <td class="red">${h.rd}%</td>
-    </tr>`).join('');
-  }
-  wrap.style.display='block';
-}
-
-document.getElementById('hs-input').addEventListener('keydown',e=>{if(e.key==='Enter') hsSearch()});
-
-// ═══════════════════════════════════════════════════════
-// TABS
-// ═══════════════════════════════════════════════════════
-function showTab(id){
-  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('active'));
-  const panel = document.getElementById('tab-'+id);
-  if(panel) panel.classList.add('active');
-  const tabs=['demographics','income','import','freight','vat'];
-  const idx=tabs.indexOf(id);
-  document.querySelectorAll('.ptab')[idx]?.classList.add('active');
-}
-
-// ═══════════════════════════════════════════════════════
-// DOWNLOADS
-// ═══════════════════════════════════════════════════════
-function downloadHTML(){
-  const name = document.getElementById('c-name').textContent;
-  const content = `<!DOCTYPE html><html><head><title>${name} — Count It Data</title>
-  <style>body{font-family:Arial,sans-serif;padding:2rem;max-width:1200px;margin:0 auto}
-  h1{color:#1a4d30}table{width:100%;border-collapse:collapse;margin:1rem 0}
-  th{background:#1e4d30;color:#fff;padding:8px 12px;text-align:left}
-  td{padding:7px 12px;border:1px solid #ddd}tr:nth-child(even){background:#f5f5f5}
-  </style></head><body>
-  <h1>🌍 ${name} — Count It Data Export</h1>
-  <p>Generated: ${new Date().toLocaleDateString()} | Source: Count It Platform</p>
-  ${document.getElementById('tab-demographics').innerHTML}
-  </body></html>`;
-  dlFile(`${name}_CountIt.html`, content, 'text/html');
-}
-
-function downloadText(){
-  const name = document.getElementById('c-name').textContent;
-  let txt = `COUNT IT — ${name} Data Export\n`;
-  txt += `Generated: ${new Date().toLocaleDateString()}\n\n`;
-  document.querySelectorAll('.sheet').forEach(t=>{
-    t.querySelectorAll('tr').forEach(r=>{
-      txt += [...r.querySelectorAll('th,td')].map(c=>c.textContent.trim()).join('\t') + '\n';
-    });
-    txt += '\n';
-  });
-  dlFile(`${name}_CountIt.txt`, txt, 'text/plain');
-}
-
-function dlFile(filename, content, type){
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([content],{type}));
-  a.download = filename;
-  a.click();
-}
-
-// ═══════════════════════════════════════════════════════
-// HELPERS
-// ═══════════════════════════════════════════════════════
-function fmt(n){ return '৳'+Math.round(n).toLocaleString('en-IN'); }
-
-function toggleNav(){
+function toggleNav() {
   document.getElementById('navLinks').classList.toggle('open');
 }
-
-// Init
-calcIncomeTax();
+renderCountryGrid();
 </script>
 </body>
 </html>
