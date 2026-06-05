@@ -1,0 +1,67 @@
+{
+  "code": "BD",
+  "country": "Bangladesh",
+  "flag": "🇧🇩",
+  "currency": "BDT",
+  "demographics": {
+    "population": 171186372,
+    "male_percent": 49.6,
+    "female_percent": 50.4,
+    "growth_rate": 1.23,
+    "birth_rate": 17.8,
+    "death_rate": 5.6,
+    "infant_mortality": 24.1,
+    "life_expectancy_male": 72.1,
+    "life_expectancy_female": 75.3,
+    "median_age": 28.1,
+    "urban_percent": 39.0
+  },
+  "religion": [
+    { "name": "Islam (Sunni)", "percent": 91.0, "pop": 157000000 },
+    { "name": "Hinduism", "percent": 7.9, "pop": 13600000 },
+    { "name": "Buddhism", "percent": 0.6, "pop": 1000000 },
+    { "name": "Christianity", "percent": 0.4, "pop": 692000 },
+    { "name": "Other / No Religion", "percent": 0.1, "pop": 173000 }
+  ],
+  "ethnic_groups": [
+    { "name": "Bengali", "percent": 98.0, "pop": 169540000 },
+    { "name": "Chakma", "percent": 0.3, "pop": 519000 },
+    { "name": "Marma (Magh)", "percent": 0.2, "pop": 346000 },
+    { "name": "Tripuri", "percent": 0.1, "pop": 173000 },
+    { "name": "Garo", "percent": 0.1, "pop": 173000 },
+    { "name": "Other Indigenous", "percent": 0.3, "pop": 519000 }
+  ],
+  "tax": {
+    "free_threshold": 350000,
+    "slabs": [
+      { "from": 0, "to": 350000, "rate": 0 },
+      { "from": 350001, "to": 450000, "rate": 5 },
+      { "from": 450001, "to": 850000, "rate": 10 },
+      { "from": 850001, "to": 1350000, "rate": 15 },
+      { "from": 1350001, "to": 1850000, "rate": 20 },
+      { "from": 1850001, "to": 3850000, "rate": 25 },
+      { "from": 3850001, "to": null, "rate": 30 }
+    ]
+  },
+  "land_units": [
+    { "name": "Bigha", "to_sqft": 27225 },
+    { "name": "Katha", "to_sqft": 1361.25 },
+    { "name": "Ropani", "to_sqft": 5476.5 }
+  ],
+  "products": [
+    {
+      "hs_code": "7108.12",
+      "description": "Gold (unwrought)",
+      "import_duty_percent": 5,
+      "vat_percent": 15,
+      "freight_usd_per_kg": 2.50
+    },
+    {
+      "hs_code": "7106.91",
+      "description": "Silver (unwrought)",
+      "import_duty_percent": 3,
+      "vat_percent": 15,
+      "freight_usd_per_kg": 1.80
+    }
+  ]
+}
