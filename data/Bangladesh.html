@@ -3,7 +3,6 @@
   "flag": "🇧🇩",
   "region": "South Asia",
   "subtitle": "South Asia · Population: 171M · Data: 2024-25",
-  "printable": true,
   "demographics": {
     "population": 171186372,
     "male_percent": 49.8,
@@ -11,33 +10,24 @@
     "growth_rate": 1.01,
     "birth_rate": 17.8,
     "death_rate": 5.5,
-    "infant_mortality": 24.2,
     "life_expectancy_male": 72.4,
     "life_expectancy_female": 75.8,
     "median_age": 27.9,
-    "urban_percent": 39.4,
-    "literacy_rate": 74.9,
-    "density_per_km2": 1265
+    "urban_percent": 39.4
   },
   "religion": [
     { "name": "Islam", "percent": 91.04, "pop": "155,800,000" },
     { "name": "Hinduism", "percent": 7.95, "pop": "13,600,000" },
     { "name": "Buddhism", "percent": 0.61, "pop": "1,040,000" },
-    { "name": "Christianity", "percent": 0.31, "pop": "530,000" },
-    { "name": "Other", "percent": 0.09, "pop": "150,000" }
+    { "name": "Christianity", "percent": 0.31, "pop": "530,000" }
   ],
   "ethnic_groups": [
     { "name": "Bengali", "percent": 98.0, "pop": "167,800,000" },
     { "name": "Bihari", "percent": 0.8, "pop": "1,370,000" },
-    { "name": "Chakma", "percent": 0.3, "pop": "513,000" },
-    { "name": "Marma", "percent": 0.2, "pop": "342,000" },
-    { "name": "Tanchangya", "percent": 0.1, "pop": "171,000" },
-    { "name": "Other Indigenous", "percent": 0.6, "pop": "1,027,000" }
+    { "name": "Chakma", "percent": 0.3, "pop": "513,000" }
   ],
   "tax": {
     "free_threshold": 350000,
-    "currency": "BDT",
-    "assessment_year": "2025-26",
     "slabs": [
       { "from": 0, "to": 350000, "rate": 0 },
       { "from": 350001, "to": 450000, "rate": 5 },
@@ -45,55 +35,16 @@
       { "from": 750001, "to": 1150000, "rate": 15 },
       { "from": 1150001, "to": 1650000, "rate": 20 },
       { "from": 1650001, "to": null, "rate": 25 }
-    ],
-    "women_senior_threshold": 400000,
-    "investment_rebate_percent": 15,
-    "maximum_rebate_percent_of_tax": 30
+    ]
   },
   "products": [
-    { "hs_code": "8471.30", "description": "Laptops & Computers", "import_duty_percent": 15, "vat_percent": 15, "sd_percent": 0, "rd_percent": 0, "freight_usd_per_kg": 3.50 },
-    { "hs_code": "8517.13", "description": "Smartphones", "import_duty_percent": 25, "vat_percent": 15, "sd_percent": 10, "rd_percent": 5, "freight_usd_per_kg": 4.00 },
-    { "hs_code": "8703.22", "description": "Motor Cars (<1500cc)", "import_duty_percent": 60, "vat_percent": 15, "sd_percent": 20, "rd_percent": 5, "freight_usd_per_kg": 2.50 },
-    { "hs_code": "8703.23", "description": "Motor Cars (>1500cc)", "import_duty_percent": 100, "vat_percent": 15, "sd_percent": 25, "rd_percent": 5, "freight_usd_per_kg": 2.50 },
-    { "hs_code": "3004.90", "description": "Pharmaceuticals", "import_duty_percent": 10, "vat_percent": 7.5, "sd_percent": 0, "rd_percent": 0, "freight_usd_per_kg": 8.00 },
-    { "hs_code": "6109.10", "description": "Cotton T-shirts", "import_duty_percent": 25, "vat_percent": 15, "sd_percent": 0, "rd_percent": 0, "freight_usd_per_kg": 3.00 },
-    { "hs_code": "9403.60", "description": "Wooden Furniture", "import_duty_percent": 30, "vat_percent": 15, "sd_percent": 0, "rd_percent": 0, "freight_usd_per_kg": 2.00 },
-    { "hs_code": "0803.10", "description": "Fresh Bananas", "import_duty_percent": 25, "vat_percent": 15, "sd_percent": 0, "rd_percent": 0, "freight_usd_per_kg": 0.80 },
-    { "hs_code": "7207.11", "description": "Iron & Steel (Semi-finished)", "import_duty_percent": 5, "vat_percent": 15, "sd_percent": 0, "rd_percent": 0, "freight_usd_per_kg": 0.50 },
-    { "hs_code": "8429.52", "description": "Excavating Machinery", "import_duty_percent": 5, "vat_percent": 15, "sd_percent": 0, "rd_percent": 0, "freight_usd_per_kg": 1.20 }
+    { "hs_code": "8471.30", "description": "Laptops", "import_duty_percent": 15, "vat_percent": 15, "sd_percent": 0, "rd_percent": 0 },
+    { "hs_code": "8517.13", "description": "Smartphones", "import_duty_percent": 25, "vat_percent": 15, "sd_percent": 10, "rd_percent": 5 }
   ],
   "freight_routes": [
-    { "route": "China → Chittagong", "mode": "Sea", "transit_time": "18-22 days", "cost_20ft": "$1,200-1,800", "cost_air_per_kg": "$4.50", "notes": "Peak season surcharge" },
-    { "route": "Singapore → Chittagong", "mode": "Sea", "transit_time": "10-14 days", "cost_20ft": "$800-1,200", "cost_air_per_kg": "$3.20", "notes": "Transshipment via SG" },
-    { "route": "Dubai → Dhaka", "mode": "Air", "transit_time": "2-3 days", "cost_20ft": "—", "cost_air_per_kg": "$2.80", "notes": "Direct flights available" },
-    { "route": "Europe → Chittagong", "mode": "Sea", "transit_time": "25-30 days", "cost_20ft": "$1,500-2,200", "cost_air_per_kg": "$5.00", "notes": "Via Suez Canal" },
-    { "route": "USA → Chittagong", "mode": "Sea", "transit_time": "30-35 days", "cost_20ft": "$2,000-2,800", "cost_air_per_kg": "$6.00", "notes": "Transpacific + Indian Ocean" }
+    { "route": "China → Chittagong", "mode": "Sea", "transit_time": "18-22 days", "cost_20ft": "$1,200-1,800", "cost_air_per_kg": "$4.50", "notes": "" }
   ],
   "vat_rates": [
-    { "sector": "Standard (most goods/services)", "rate": 15, "status": "Active", "notes": "Standard VAT rate" },
-    { "sector": "Mobile / Telecom Services", "rate": 15, "status": "Active", "notes": "Additional 15% surcharge" },
-    { "sector": "Banking & Insurance", "rate": 15, "status": "Active", "notes": "TR rebate available" },
-    { "sector": "Pharmaceuticals (life-saving)", "rate": 7.5, "status": "Reduced", "notes": "Essential drugs" },
-    { "sector": "Rice, Vegetables, Fish", "rate": 0, "status": "Exempt", "notes": "Basic food items" },
-    { "sector": "Educational Services", "rate": 0, "status": "Exempt", "notes": "Schools, universities" },
-    { "sector": "Healthcare Services", "rate": 0, "status": "Exempt", "notes": "Hospitals, clinics" },
-    { "sector": "Export-oriented goods", "rate": 0, "status": "Zero-rated", "notes": "VAT refundable" }
-  ],
-  "economy": {
-    "gdp_usd": 446000000000,
-    "gdp_per_capita_usd": 2600,
-    "gdp_growth_percent": 6.5,
-    "inflation_percent": 7.1,
-    "unemployment_percent": 4.5,
-    "foreign_reserve_usd": 20000000000,
-    "export_usd": 52000000000,
-    "import_usd": 63000000000,
-    "main_exports": ["Ready-made garments", "Jute", "Leather", "Pharmaceuticals"],
-    "main_imports": ["Machinery", "Petroleum", "Cotton", "Iron steel", "Chemicals"]
-  },
-  "print_options": {
-    "default_paper_size": "A4",
-    "orientation": "portrait",
-    "margins": "normal"
-  }
+    { "sector": "Standard VAT", "rate": 15, "status": "Active", "notes": "" }
+  ]
 }
