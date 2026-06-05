@@ -1,0 +1,68 @@
+{
+  "code": "IN",
+  "country": "India",
+  "flag": "🇮🇳",
+  "currency": "INR",
+  "demographics": {
+    "population": 1441710000,
+    "male_percent": 51.5,
+    "female_percent": 48.5,
+    "growth_rate": 0.95,
+    "birth_rate": 16.1,
+    "death_rate": 6.6,
+    "infant_mortality": 28.8,
+    "life_expectancy_male": 68.5,
+    "life_expectancy_female": 71.2,
+    "median_age": 28.4,
+    "urban_percent": 36.4
+  },
+  "religion": [
+    { "name": "Hinduism", "percent": 79.8, "pop": 1150000000 },
+    { "name": "Islam", "percent": 14.2, "pop": 204000000 },
+    { "name": "Christianity", "percent": 2.3, "pop": 33000000 },
+    { "name": "Sikhism", "percent": 1.7, "pop": 24500000 },
+    { "name": "Buddhism", "percent": 0.7, "pop": 10000000 },
+    { "name": "Jainism", "percent": 0.4, "pop": 5760000 },
+    { "name": "Other", "percent": 0.9, "pop": 13000000 }
+  ],
+  "ethnic_groups": [
+    { "name": "Indo-Aryan", "percent": 72, "pop": 1038000000 },
+    { "name": "Dravidian", "percent": 25, "pop": 360000000 },
+    { "name": "Mongoloid & Others", "percent": 3, "pop": 43000000 }
+  ],
+  "tax": {
+    "free_threshold": 400000,
+    "slabs": [
+      { "from": 0, "to": 400000, "rate": 0 },
+      { "from": 400001, "to": 800000, "rate": 5 },
+      { "from": 800001, "to": 1200000, "rate": 10 },
+      { "from": 1200001, "to": 1600000, "rate": 15 },
+      { "from": 1600001, "to": 2000000, "rate": 20 },
+      { "from": 2000001, "to": 2400000, "rate": 25 },
+      { "from": 2400001, "to": null, "rate": 30 }
+    ]
+  },
+  "land_units": [
+    { "name": "Bigha", "to_sqft": 27225 },
+    { "name": "Katha", "to_sqft": 1361.25 },
+    { "name": "Gaj", "to_sqft": 9 },
+    { "name": "Marla", "to_sqft": 272.25 },
+    { "name": "Acre", "to_sqft": 43560 }
+  ],
+  "products": [
+    {
+      "hs_code": "7108.12",
+      "description": "Gold (unwrought)",
+      "import_duty_percent": 15,
+      "vat_percent": 3,
+      "freight_usd_per_kg": 2.20
+    },
+    {
+      "hs_code": "8517.13",
+      "description": "Smartphones",
+      "import_duty_percent": 20,
+      "vat_percent": 18,
+      "freight_usd_per_kg": 4.50
+    }
+  ]
+}
