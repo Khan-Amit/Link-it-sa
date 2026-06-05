@@ -1,23 +1,41 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDE / editor files
 .vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-files
-*.bclicense
-*.flf
-#Test results file
-TestResults.xml
+.idea/
+*.swp
+*.swo
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Environment / secrets
+.env
+.env.local
+config.php
+
+# Node modules (if any)
+node_modules/
+
+# Python cache (if any)
+__pycache__/
+*.pyc
+
+# Compiled output
+dist/
+build/
+
+# Backup files
+*.bak
+*.backup
+
+# ============================================
+# IMPORTANT: Allow data folder and JSON files
+# ============================================
+# Do NOT ignore the data folder
+!data/
+# Do NOT ignore JSON files inside data
+!data/*.json
