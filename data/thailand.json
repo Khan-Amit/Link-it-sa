@@ -1,0 +1,42 @@
+{
+  "country": "Thailand",
+  "flag": "🇹🇭",
+  "currency": "THB",
+  "demographics": {
+    "population": 71801000,
+    "male_percent": 48.6,
+    "female_percent": 51.4,
+    "birth_rate_per_1000": 10.0,
+    "death_rate_per_1000": 8.0,
+    "growth_rate_percent": 0.20,
+    "urban_percent": 52.0
+  },
+  "tax": {
+    "tax_free_threshold": 150000,
+    "slabs": [
+      { "from": 0, "to": 150000, "rate": 0 },
+      { "from": 150001, "to": 300000, "rate": 5 },
+      { "from": 300001, "to": 500000, "rate": 10 },
+      { "from": 500001, "to": 750000, "rate": 15 },
+      { "from": 750001, "to": 1000000, "rate": 20 },
+      { "from": 1000001, "to": 2000000, "rate": 25 },
+      { "from": 2000001, "to": 5000000, "rate": 30 },
+      { "from": 5000001, "to": null, "rate": 35 }
+    ]
+  },
+  "land_units": [
+    { "name": "Rai", "to_sqft": 17222.25 },
+    { "name": "Ngan", "to_sqft": 4305.56 },
+    { "name": "Square Wah (Tarang Wa)", "to_sqft": 43.06 }
+  ],
+  "products": [
+    {
+      "hs_code": "8471.30",
+      "description": "Laptops & Data Processing Units",
+      "import_duty_percent": 0,
+      "vat_percent": 7,
+      "advance_tax_percent": 0,
+      "freight_usd_per_kg": 3.10
+    }
+  ]
+}
