@@ -3,16 +3,37 @@
   "flag": "🇧🇩",
   "currency": "BDT",
   "demographics": {
-    "population": 171186372,
-    "male_percent": 49.6,
-    "female_percent": 50.4,
-    "birth_rate_per_1000": 17.8,
-    "death_rate_per_1000": 5.5,
-    "growth_rate_percent": 1.23,
-    "urban_percent": 39.0
+    "total_population": 173000000,
+    "male_population": 86500000,
+    "female_population": 86500000,
+    "gender_ratio": "100 : 100",
+    "population_growth_rate": 1.01,
+    "birth_rate_per_1000": 17.3,
+    "death_rate_per_1000": 5.6,
+    "infant_mortality_rate_per_1000": 24.1,
+    "life_expectancy_male": 72.1,
+    "life_expectancy_female": 75.3,
+    "median_age": 28.1
   },
+  "religion": [
+    { "name": "Islam (Sunni)", "percent": 91.0, "estimated_pop": 157430000 },
+    { "name": "Hinduism", "percent": 7.9, "estimated_pop": 13667000 },
+    { "name": "Buddhism", "percent": 0.6, "estimated_pop": 1038000 },
+    { "name": "Christianity", "percent": 0.4, "estimated_pop": 692000 },
+    { "name": "Other / No Religion", "percent": 0.1, "estimated_pop": 173000 }
+  ],
+  "ethnicity": [
+    { "name": "Bengali", "percent": 98.0, "estimated_pop": 169540000 },
+    { "name": "Chakma", "percent": 0.3, "estimated_pop": 519000 },
+    { "name": "Marma (Magh)", "percent": 0.2, "estimated_pop": 346000 },
+    { "name": "Tripuri", "percent": 0.1, "estimated_pop": 173000 },
+    { "name": "Garo", "percent": 0.1, "estimated_pop": 173000 },
+    { "name": "Other Indigenous", "percent": 0.3, "estimated_pop": 519000 }
+  ],
   "tax": {
     "tax_free_threshold": 350000,
+    "investment_rebate_percent": 15,
+    "investment_rebate_cap": 1000000,
     "slabs": [
       { "from": 0, "to": 350000, "rate": 0 },
       { "from": 350001, "to": 450000, "rate": 5 },
