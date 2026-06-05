@@ -1,0 +1,60 @@
+{
+  "code": "TH",
+  "country": "Thailand",
+  "flag": "🇹🇭",
+  "currency": "THB",
+  "demographics": {
+    "population": 71801000,
+    "male_percent": 48.6,
+    "female_percent": 51.4,
+    "growth_rate": 0.20,
+    "birth_rate": 10.0,
+    "death_rate": 8.0,
+    "infant_mortality": 8.0,
+    "life_expectancy_male": 74.5,
+    "life_expectancy_female": 81.2,
+    "median_age": 40.1,
+    "urban_percent": 52.0
+  },
+  "religion": [
+    { "name": "Buddhism", "percent": 94.6, "pop": 67900000 },
+    { "name": "Islam", "percent": 4.3, "pop": 3080000 },
+    { "name": "Christianity", "percent": 1.0, "pop": 718000 },
+    { "name": "Other", "percent": 0.1, "pop": 72000 }
+  ],
+  "ethnic_groups": [
+    { "name": "Thai", "percent": 96, "pop": 68900000 },
+    { "name": "Burmese", "percent": 1.5, "pop": 1070000 },
+    { "name": "Chinese", "percent": 1.0, "pop": 718000 },
+    { "name": "Khmer", "percent": 0.7, "pop": 500000 },
+    { "name": "Malay", "percent": 0.5, "pop": 360000 },
+    { "name": "Other", "percent": 0.3, "pop": 215000 }
+  ],
+  "tax": {
+    "free_threshold": 150000,
+    "slabs": [
+      { "from": 0, "to": 150000, "rate": 0 },
+      { "from": 150001, "to": 300000, "rate": 5 },
+      { "from": 300001, "to": 500000, "rate": 10 },
+      { "from": 500001, "to": 750000, "rate": 15 },
+      { "from": 750001, "to": 1000000, "rate": 20 },
+      { "from": 1000001, "to": 2000000, "rate": 25 },
+      { "from": 2000001, "to": 5000000, "rate": 30 },
+      { "from": 5000001, "to": null, "rate": 35 }
+    ]
+  },
+  "land_units": [
+    { "name": "Rai", "to_sqft": 17222.25 },
+    { "name": "Ngan", "to_sqft": 4305.56 },
+    { "name": "Square Wah", "to_sqft": 43.06 }
+  ],
+  "products": [
+    {
+      "hs_code": "8471.30",
+      "description": "Laptops & Data Processing Units",
+      "import_duty_percent": 0,
+      "vat_percent": 7,
+      "freight_usd_per_kg": 3.10
+    }
+  ]
+}
